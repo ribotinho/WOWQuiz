@@ -3,18 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FAE31452455E5E1009F4F8F /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE31442455E5E1009F4F8F /* Answer.swift */; };
+		5FCFA5622456AB1900FE08D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCFA5612456AB1900FE08D8 /* HomeViewController.swift */; };
+		5FCFA56524570ECA00FE08D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCFA56424570ECA00FE08D8 /* Constants.swift */; };
+		5FCFA56724570F1E00FE08D8 /* LifeCraft_Font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FCFA56624570F1500FE08D8 /* LifeCraft_Font.ttf */; };
+		5FCFA5692457127700FE08D8 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCFA5682457127700FE08D8 /* AnswerButton.swift */; };
+		5FCFA56B2457136A00FE08D8 /* Morpheus.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FCFA56A2457136A00FE08D8 /* Morpheus.ttf */; };
 		5FEB53382455D3ED00888FB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB53372455D3ED00888FB4 /* AppDelegate.swift */; };
 		5FEB533A2455D3ED00888FB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB53392455D3ED00888FB4 /* SceneDelegate.swift */; };
-		5FEB533C2455D3ED00888FB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB533B2455D3ED00888FB4 /* ViewController.swift */; };
 		5FEB533F2455D3ED00888FB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FEB533D2455D3ED00888FB4 /* Main.storyboard */; };
 		5FEB53412455D3EE00888FB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FEB53402455D3EE00888FB4 /* Assets.xcassets */; };
 		5FEB53442455D3EE00888FB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FEB53422455D3EE00888FB4 /* LaunchScreen.storyboard */; };
 		5FEB534F2455D3EE00888FB4 /* WOWQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB534E2455D3EE00888FB4 /* WOWQuizTests.swift */; };
 		5FEB535A2455D3EE00888FB4 /* WOWQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB53592455D3EE00888FB4 /* WOWQuizUITests.swift */; };
+		5FEB53692455D42000888FB4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB53682455D42000888FB4 /* Question.swift */; };
+		5FEB536B2455D45100888FB4 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB536A2455D45100888FB4 /* Quiz.swift */; };
+		5FEB536E2455D56200888FB4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB536D2455D56200888FB4 /* GameViewController.swift */; };
+		5FEB53702455D87300888FB4 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB536F2455D87300888FB4 /* DatabaseManager.swift */; };
+		95EF09A9DDC020880A71D597 /* Pods_WOWQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A047207092C38BDE8FDD57B /* Pods_WOWQuizTests.framework */; };
+		DFFF1DADC1288AA20CCBF547 /* Pods_WOWQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 809C4D398C508B7E1FB6FEF0 /* Pods_WOWQuiz.framework */; };
+		FCFDE7017B5FA647DD886760 /* Pods_WOWQuiz_WOWQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335307589F4D1815B9B87D89 /* Pods_WOWQuiz_WOWQuizUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +47,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05BD5343347FC5189506B558 /* Pods-WOWQuiz-WOWQuizUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOWQuiz-WOWQuizUITests.release.xcconfig"; path = "Target Support Files/Pods-WOWQuiz-WOWQuizUITests/Pods-WOWQuiz-WOWQuizUITests.release.xcconfig"; sourceTree = "<group>"; };
+		324D9FA9B2533A228FF5197D /* Pods-WOWQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOWQuizTests.release.xcconfig"; path = "Target Support Files/Pods-WOWQuizTests/Pods-WOWQuizTests.release.xcconfig"; sourceTree = "<group>"; };
+		335307589F4D1815B9B87D89 /* Pods_WOWQuiz_WOWQuizUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WOWQuiz_WOWQuizUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FAE31442455E5E1009F4F8F /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		5FCFA5612456AB1900FE08D8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5FCFA56424570ECA00FE08D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5FCFA56624570F1500FE08D8 /* LifeCraft_Font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LifeCraft_Font.ttf; sourceTree = "<group>"; };
+		5FCFA5682457127700FE08D8 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
+		5FCFA56A2457136A00FE08D8 /* Morpheus.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Morpheus.ttf; sourceTree = "<group>"; };
 		5FEB53342455D3ED00888FB4 /* WOWQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WOWQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FEB53372455D3ED00888FB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FEB53392455D3ED00888FB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5FEB533B2455D3ED00888FB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5FEB533E2455D3ED00888FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FEB53402455D3EE00888FB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FEB53432455D3EE00888FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +69,16 @@
 		5FEB53552455D3EE00888FB4 /* WOWQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WOWQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FEB53592455D3EE00888FB4 /* WOWQuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOWQuizUITests.swift; sourceTree = "<group>"; };
 		5FEB535B2455D3EE00888FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FEB53682455D42000888FB4 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		5FEB536A2455D45100888FB4 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		5FEB536D2455D56200888FB4 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5FEB536F2455D87300888FB4 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		6290C5C665B3FECE1C62213B /* Pods-WOWQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOWQuiz.release.xcconfig"; path = "Target Support Files/Pods-WOWQuiz/Pods-WOWQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		809C4D398C508B7E1FB6FEF0 /* Pods_WOWQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WOWQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A047207092C38BDE8FDD57B /* Pods_WOWQuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WOWQuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA90E8D00EEDA9454D97F443 /* Pods-WOWQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOWQuiz.debug.xcconfig"; path = "Target Support Files/Pods-WOWQuiz/Pods-WOWQuiz.debug.xcconfig"; sourceTree = "<group>"; };
+		D319DCC3AF2262BE44CF5A2D /* Pods-WOWQuizTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOWQuizTests.debug.xcconfig"; path = "Target Support Files/Pods-WOWQuizTests/Pods-WOWQuizTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E35679CD6EFAD1312A9B76EC /* Pods-WOWQuiz-WOWQuizUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOWQuiz-WOWQuizUITests.debug.xcconfig"; path = "Target Support Files/Pods-WOWQuiz-WOWQuizUITests/Pods-WOWQuiz-WOWQuizUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFFF1DADC1288AA20CCBF547 /* Pods_WOWQuiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95EF09A9DDC020880A71D597 /* Pods_WOWQuizTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +102,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFDE7017B5FA647DD886760 /* Pods_WOWQuiz_WOWQuizUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FCFA56324570EB700FE08D8 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				5FCFA56624570F1500FE08D8 /* LifeCraft_Font.ttf */,
+				5FCFA56A2457136A00FE08D8 /* Morpheus.ttf */,
+				5FCFA56424570ECA00FE08D8 /* Constants.swift */,
+				5FCFA5682457127700FE08D8 /* AnswerButton.swift */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		5FEB532B2455D3ED00888FB4 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +127,8 @@
 				5FEB534D2455D3EE00888FB4 /* WOWQuizTests */,
 				5FEB53582455D3EE00888FB4 /* WOWQuizUITests */,
 				5FEB53352455D3ED00888FB4 /* Products */,
+				ACB3CD159191C23FA24B9FC3 /* Pods */,
+				BE39521F0847A791FB58C04D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +145,11 @@
 		5FEB53362455D3ED00888FB4 /* WOWQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				5FCFA56324570EB700FE08D8 /* Supporting files */,
+				5FEB536C2455D54C00888FB4 /* Controllers */,
+				5FEB53672455D41100888FB4 /* Model */,
 				5FEB53372455D3ED00888FB4 /* AppDelegate.swift */,
 				5FEB53392455D3ED00888FB4 /* SceneDelegate.swift */,
-				5FEB533B2455D3ED00888FB4 /* ViewController.swift */,
 				5FEB533D2455D3ED00888FB4 /* Main.storyboard */,
 				5FEB53402455D3EE00888FB4 /* Assets.xcassets */,
 				5FEB53422455D3EE00888FB4 /* LaunchScreen.storyboard */,
@@ -128,6 +176,49 @@
 			path = WOWQuizUITests;
 			sourceTree = "<group>";
 		};
+		5FEB53672455D41100888FB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5FEB536A2455D45100888FB4 /* Quiz.swift */,
+				5FEB53682455D42000888FB4 /* Question.swift */,
+				5FEB536F2455D87300888FB4 /* DatabaseManager.swift */,
+				5FAE31442455E5E1009F4F8F /* Answer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5FEB536C2455D54C00888FB4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5FEB536D2455D56200888FB4 /* GameViewController.swift */,
+				5FCFA5612456AB1900FE08D8 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ACB3CD159191C23FA24B9FC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA90E8D00EEDA9454D97F443 /* Pods-WOWQuiz.debug.xcconfig */,
+				6290C5C665B3FECE1C62213B /* Pods-WOWQuiz.release.xcconfig */,
+				E35679CD6EFAD1312A9B76EC /* Pods-WOWQuiz-WOWQuizUITests.debug.xcconfig */,
+				05BD5343347FC5189506B558 /* Pods-WOWQuiz-WOWQuizUITests.release.xcconfig */,
+				D319DCC3AF2262BE44CF5A2D /* Pods-WOWQuizTests.debug.xcconfig */,
+				324D9FA9B2533A228FF5197D /* Pods-WOWQuizTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BE39521F0847A791FB58C04D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				809C4D398C508B7E1FB6FEF0 /* Pods_WOWQuiz.framework */,
+				335307589F4D1815B9B87D89 /* Pods_WOWQuiz_WOWQuizUITests.framework */,
+				9A047207092C38BDE8FDD57B /* Pods_WOWQuizTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FEB535E2455D3EE00888FB4 /* Build configuration list for PBXNativeTarget "WOWQuiz" */;
 			buildPhases = (
+				44D2ED3FB3A07DF8811258AA /* [CP] Check Pods Manifest.lock */,
 				5FEB53302455D3ED00888FB4 /* Sources */,
 				5FEB53312455D3ED00888FB4 /* Frameworks */,
 				5FEB53322455D3ED00888FB4 /* Resources */,
+				04BDB258F9B49FF87A5A3E5B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FEB53612455D3EE00888FB4 /* Build configuration list for PBXNativeTarget "WOWQuizTests" */;
 			buildPhases = (
+				BA1BE846373950004D9E66E0 /* [CP] Check Pods Manifest.lock */,
 				5FEB53462455D3EE00888FB4 /* Sources */,
 				5FEB53472455D3EE00888FB4 /* Frameworks */,
 				5FEB53482455D3EE00888FB4 /* Resources */,
@@ -170,9 +264,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FEB53642455D3EE00888FB4 /* Build configuration list for PBXNativeTarget "WOWQuizUITests" */;
 			buildPhases = (
+				8AF9C042CA76D7350AF271FD /* [CP] Check Pods Manifest.lock */,
 				5FEB53512455D3EE00888FB4 /* Sources */,
 				5FEB53522455D3EE00888FB4 /* Frameworks */,
 				5FEB53532455D3EE00888FB4 /* Resources */,
+				0461913999F7DD2C17840179 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +328,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FCFA56724570F1E00FE08D8 /* LifeCraft_Font.ttf in Resources */,
+				5FCFA56B2457136A00FE08D8 /* Morpheus.ttf in Resources */,
 				5FEB53442455D3EE00888FB4 /* LaunchScreen.storyboard in Resources */,
 				5FEB53412455D3EE00888FB4 /* Assets.xcassets in Resources */,
 				5FEB533F2455D3ED00888FB4 /* Main.storyboard in Resources */,
@@ -254,14 +352,124 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0461913999F7DD2C17840179 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WOWQuiz-WOWQuizUITests/Pods-WOWQuiz-WOWQuizUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WOWQuiz-WOWQuizUITests/Pods-WOWQuiz-WOWQuizUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WOWQuiz-WOWQuizUITests/Pods-WOWQuiz-WOWQuizUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		04BDB258F9B49FF87A5A3E5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WOWQuiz/Pods-WOWQuiz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WOWQuiz/Pods-WOWQuiz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WOWQuiz/Pods-WOWQuiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44D2ED3FB3A07DF8811258AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WOWQuiz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AF9C042CA76D7350AF271FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WOWQuiz-WOWQuizUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA1BE846373950004D9E66E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WOWQuizTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5FEB53302455D3ED00888FB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FEB533C2455D3ED00888FB4 /* ViewController.swift in Sources */,
+				5FEB536E2455D56200888FB4 /* GameViewController.swift in Sources */,
+				5FEB536B2455D45100888FB4 /* Quiz.swift in Sources */,
+				5FEB53702455D87300888FB4 /* DatabaseManager.swift in Sources */,
+				5FCFA5622456AB1900FE08D8 /* HomeViewController.swift in Sources */,
+				5FAE31452455E5E1009F4F8F /* Answer.swift in Sources */,
+				5FCFA5692457127700FE08D8 /* AnswerButton.swift in Sources */,
+				5FEB53692455D42000888FB4 /* Question.swift in Sources */,
 				5FEB53382455D3ED00888FB4 /* AppDelegate.swift in Sources */,
 				5FEB533A2455D3ED00888FB4 /* SceneDelegate.swift in Sources */,
+				5FCFA56524570ECA00FE08D8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +640,7 @@
 		};
 		5FEB535F2455D3EE00888FB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA90E8D00EEDA9454D97F443 /* Pods-WOWQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +658,7 @@
 		};
 		5FEB53602455D3EE00888FB4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6290C5C665B3FECE1C62213B /* Pods-WOWQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +676,7 @@
 		};
 		5FEB53622455D3EE00888FB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D319DCC3AF2262BE44CF5A2D /* Pods-WOWQuizTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +698,7 @@
 		};
 		5FEB53632455D3EE00888FB4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 324D9FA9B2533A228FF5197D /* Pods-WOWQuizTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +720,7 @@
 		};
 		5FEB53652455D3EE00888FB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E35679CD6EFAD1312A9B76EC /* Pods-WOWQuiz-WOWQuizUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +740,7 @@
 		};
 		5FEB53662455D3EE00888FB4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05BD5343347FC5189506B558 /* Pods-WOWQuiz-WOWQuizUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

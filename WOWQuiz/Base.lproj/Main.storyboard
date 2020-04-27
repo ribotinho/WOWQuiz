@@ -1,24 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQV-8T-Ahd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="LifeCraft_Font.ttf">
+            <string>LifeCraft</string>
+        </array>
+        <array key="Morpheus.ttf">
+            <string>Morpheus</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
+        <scene sceneID="hzC-X4-13F">
+            <objects>
+                <viewController id="neH-1N-BqR" customClass="HomeViewController" customModule="WOWQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v9w-BZ-yoE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_1" translatesAutoresizingMaskIntoConstraints="NO" id="ac2-2Q-tvV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBD-ZR-tHV">
+                                <rect key="frame" x="119.5" y="702" width="175" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Gd8-KE-2rL"/>
+                                    <constraint firstAttribute="width" constant="175" id="spp-4b-4nc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LifeCraft" family="LifeCraft" pointSize="25"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="neH-1N-BqR" eventType="touchUpInside" id="a07-zG-cYL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ac2-2Q-tvV" secondAttribute="bottom" id="89J-vx-sCd"/>
+                            <constraint firstItem="ac2-2Q-tvV" firstAttribute="leading" secondItem="xyl-HC-1iq" secondAttribute="leading" id="HMx-Qd-lpx"/>
+                            <constraint firstItem="ac2-2Q-tvV" firstAttribute="top" secondItem="v9w-BZ-yoE" secondAttribute="top" id="Lhg-UU-dqo"/>
+                            <constraint firstItem="fBD-ZR-tHV" firstAttribute="centerX" secondItem="v9w-BZ-yoE" secondAttribute="centerX" id="Oht-cR-SaI"/>
+                            <constraint firstItem="xyl-HC-1iq" firstAttribute="bottom" secondItem="fBD-ZR-tHV" secondAttribute="bottom" constant="100" id="ZN3-1l-P9s"/>
+                            <constraint firstItem="ac2-2Q-tvV" firstAttribute="trailing" secondItem="xyl-HC-1iq" secondAttribute="trailing" id="r1k-1c-UoO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xyl-HC-1iq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="F9o-nD-VaH"/>
+                    <connections>
+                        <outlet property="startGameButon" destination="fBD-ZR-tHV" id="9P0-2s-kb9"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="startGameSegue" id="HJt-XC-juZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oMn-31-4xI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="255.07246376811597" y="144.64285714285714"/>
+        </scene>
+        <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="WOWQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dLO-21-Ux0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EfO-W6-G9L">
+                                <rect key="frame" x="20" y="138" width="374" height="73.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7f-dE-yIt">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y09-2V-Fbu">
+                                        <rect key="frame" x="0.0" y="49" width="374" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="lV7-eX-aT8">
+                                <rect key="frame" x="20" y="261.5" width="374" height="219"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpl-as-Xgr">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqU-7p-Gkt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIK-Kz-mo7">
+                                        <rect key="frame" x="0.0" y="63" width="374" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HfG-67-lD9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s7-5k-Zf0">
+                                        <rect key="frame" x="0.0" y="126" width="374" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jdp-0q-EmS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVt-hq-dMd">
+                                        <rect key="frame" x="0.0" y="189" width="374" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ofh-5g-wYN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lV7-eX-aT8" firstAttribute="top" secondItem="EfO-W6-G9L" secondAttribute="bottom" constant="50" id="2Qb-ci-Vqk"/>
+                            <constraint firstItem="lV7-eX-aT8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4FV-r9-doc"/>
+                            <constraint firstItem="EfO-W6-G9L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8Xz-Gx-FJr"/>
+                            <constraint firstItem="dLO-21-Ux0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DOC-JN-fCb"/>
+                            <constraint firstItem="dLO-21-Ux0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GrT-DX-LEL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EfO-W6-G9L" secondAttribute="trailing" constant="20" id="X3L-e8-1x8"/>
+                            <constraint firstAttribute="bottom" secondItem="dLO-21-Ux0" secondAttribute="bottom" id="aba-Kx-T0i"/>
+                            <constraint firstItem="dLO-21-Ux0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eRx-MS-eyY"/>
+                            <constraint firstItem="EfO-W6-G9L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="uWg-7g-VqK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lV7-eX-aT8" secondAttribute="trailing" constant="20" id="xUe-Tm-agB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="L5n-dG-vbA"/>
+                    <connections>
+                        <outlet property="answerButtonStackView" destination="lV7-eX-aT8" id="VqH-ji-wOX"/>
+                        <outlet property="backgroundImageView" destination="dLO-21-Ux0" id="Fbs-aL-C5p"/>
+                        <outlet property="questionCount" destination="A7f-dE-yIt" id="bbN-0V-sAj"/>
+                        <outlet property="questionTitleLabel" destination="y09-2V-Fbu" id="MeE-0R-CZi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c2u-EZ-ox1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FQV-8T-Ahd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8T0-CA-aqa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="neH-1N-BqR" kind="relationship" relationship="rootViewController" id="ML0-an-uYj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7r-qN-Efc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-655.07246376811599" y="144.64285714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background_1" width="670" height="1191"/>
+    </resources>
 </document>
