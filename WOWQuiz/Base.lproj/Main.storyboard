@@ -70,31 +70,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EfO-W6-G9L">
-                                <rect key="frame" x="20" y="108" width="374" height="73.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="S0e-18-lJk">
+                                <rect key="frame" x="20" y="128" width="374" height="23.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7f-dE-yIt">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y09-2V-Fbu">
-                                        <rect key="frame" x="0.0" y="49" width="374" height="24.5"/>
-                                        <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRz-DM-09Y">
+                                        <rect key="frame" x="187" y="0.0" width="187" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y09-2V-Fbu">
+                                <rect key="frame" x="20" y="156.5" width="374" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Nc6-J4-sy4">
-                                <rect key="frame" x="20" y="231.5" width="374" height="150"/>
+                                <rect key="frame" x="20" y="562" width="374" height="200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-iJ-gj8">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="72.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="97.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpl-as-Xgr">
-                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="72.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="97.5"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="20"/>
                                                 <state key="normal" title="Button">
@@ -105,7 +111,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIK-Kz-mo7">
-                                                <rect key="frame" x="189.5" y="0.0" width="184.5" height="72.5"/>
+                                                <rect key="frame" x="189.5" y="0.0" width="184.5" height="97.5"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="20"/>
                                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -119,10 +125,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4Ux-eq-Gg6">
-                                        <rect key="frame" x="0.0" y="77.5" width="374" height="72.5"/>
+                                        <rect key="frame" x="0.0" y="102.5" width="374" height="97.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s7-5k-Zf0">
-                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="72.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="97.5"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="20"/>
                                                 <state key="normal" title="Button">
@@ -133,7 +139,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVt-hq-dMd">
-                                                <rect key="frame" x="189.5" y="0.0" width="184.5" height="72.5"/>
+                                                <rect key="frame" x="189.5" y="0.0" width="184.5" height="97.5"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="20"/>
                                                 <state key="normal" title="Button">
@@ -150,23 +156,36 @@
                                     <constraint firstAttribute="height" constant="200" id="TZy-hi-mUw"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClC-0B-o09">
+                                <rect key="frame" x="107.5" y="420.5" width="199" height="91.5"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="75"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y09-2V-Fbu" secondAttribute="trailing" constant="20" id="1h3-3i-sgq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nc6-J4-sy4" secondAttribute="trailing" constant="20" id="5Px-4x-UGV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EfO-W6-G9L" secondAttribute="trailing" constant="20" id="HhU-nO-m5l"/>
-                            <constraint firstItem="EfO-W6-G9L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nJX-4f-Ec1"/>
-                            <constraint firstItem="Nc6-J4-sy4" firstAttribute="top" secondItem="EfO-W6-G9L" secondAttribute="bottom" constant="50" id="nX1-cI-9cL"/>
+                            <constraint firstItem="Nc6-J4-sy4" firstAttribute="top" secondItem="ClC-0B-o09" secondAttribute="bottom" constant="50" id="OgR-5L-Uch"/>
+                            <constraint firstItem="S0e-18-lJk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="aC6-wC-Mze"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S0e-18-lJk" secondAttribute="trailing" constant="20" id="gD8-cw-DOD"/>
+                            <constraint firstItem="y09-2V-Fbu" firstAttribute="top" secondItem="S0e-18-lJk" secondAttribute="bottom" constant="5" id="h5w-Wr-OLB"/>
                             <constraint firstItem="Nc6-J4-sy4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="puP-JM-kCp"/>
-                            <constraint firstItem="EfO-W6-G9L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wiD-8u-wOc"/>
+                            <constraint firstItem="S0e-18-lJk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sLt-zd-ass"/>
+                            <constraint firstItem="y09-2V-Fbu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tP3-8L-fxV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nc6-J4-sy4" secondAttribute="bottom" constant="100" id="yLE-mL-Ioh"/>
+                            <constraint firstItem="ClC-0B-o09" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yms-mC-6MM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="L5n-dG-vbA"/>
                     <connections>
                         <outlet property="answerButtonStackView" destination="Nc6-J4-sy4" id="mao-t3-mJG"/>
-                        <outlet property="questionCount" destination="A7f-dE-yIt" id="bbN-0V-sAj"/>
+                        <outlet property="questionCategoryLabel" destination="A7f-dE-yIt" id="YCV-Ic-noD"/>
+                        <outlet property="questionCountLabel" destination="lRz-DM-09Y" id="mfl-yj-Ljs"/>
                         <outlet property="questionTitleLabel" destination="y09-2V-Fbu" id="MeE-0R-CZi"/>
+                        <outlet property="timerLabel" destination="ClC-0B-o09" id="AAz-9H-keo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

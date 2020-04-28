@@ -11,7 +11,11 @@ struct DatabaseManager {
     }
     
     func getNextID() -> Int{
-     return realm.objects(Question.self).map{$0.id}.max() ?? 0
+        if let currentMaxID = realm.objects(Question.self).map({$0.id}).max() {
+            return currentMaxID + 1
+        }else {
+            return 0
+        }
      }
     
     func populateQuestion(){
@@ -25,12 +29,14 @@ struct DatabaseManager {
         list.append(answer3)
         list.append(answer4)
         
-        let question = Question(id: 0, title: "això és una pregunta", level: 1, category: "rogue", correction: "hola", answers: list)
-        let question2 = Question(id: 1, title: "això és una altra pregunta", level: 1, category: "rogue", correction: "hola", answers: list)
+        let question = Question(id: 2, title: "això és una pregunta", level: 1, category: "rogue", correction: "hola", answers: list)
+        let question2 = Question(id: 3, title: "això és una altra pregunta", level: 1, category: "rogue", correction: "hola", answers: list)
+        let question3 = Question(id: 4, title: "això és una altra pregunta", level: 1, category: "rogue", correction: "hola", answers: list)
         
         try! realm.write {
             realm.add(question)
             realm.add(question2)
+            realm.add(question3)
         }
     }
     

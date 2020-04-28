@@ -3,13 +3,14 @@ import RealmSwift
 
 class Quiz {
     var questions : Results<Question>!
-    let total : Int = 3
+    var total : Int = 0
     var currentQuestion : Int!
     
     convenience init(with questions : Results<Question>) {
         self.init()
         self.currentQuestion = 0
         self.questions = questions
+        self.total = questions.count
     }
     
     func isFinished() -> Bool{

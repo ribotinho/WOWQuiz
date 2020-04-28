@@ -3,9 +3,17 @@ import UIKit
 class GameViewController: UIViewController {
     
     var quiz : Quiz!
+    var timer : Timer!
+    var runCount : Int = 30{
+        didSet{
+            timerLabel.text = String(runCount)
+        }
+    }
     @IBOutlet weak var questionTitleLabel: UILabel!
-    @IBOutlet weak var questionCount: UILabel!
+    @IBOutlet weak var questionCountLabel: UILabel!
+    @IBOutlet weak var questionCategoryLabel: UILabel!
     @IBOutlet weak var answerButtonStackView: UIStackView!
+    @IBOutlet weak var timerLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +24,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func answerSelected(_ sender: Any) {
+        stopTimer()
         if let selectedButton = sender as? UIButton{
             if let buttonTitle = selectedButton.titleLabel?.text {
                 configureUIAnimation(with : quiz.isSelectedAnswerCorrect(for: buttonTitle))
@@ -34,10 +43,12 @@ class GameViewController: UIViewController {
     func configureUI(){
         questionTitleLabel.numberOfLines = 0
         questionTitleLabel.backgroundColor = UIColor.white.withAlphaComponent(0.75)
-        questionTitleLabel.layer.cornerRadius = 5
         updateQuestionCountLabel()
         createQuitButton()
+        startTimer()
     }
+    
+    
     
     func createQuitButton(){
         let quitButton = UIButton()
@@ -64,12 +75,17 @@ class GameViewController: UIViewController {
     }
     
     func updateQuestionCountLabel(){
-        questionCount.text = "Question \(quiz.currentQuestion + 1)/\(quiz.total)"
+        questionCountLabel.text = "\(quiz.currentQuestion + 1)/\(quiz.total)"
     }
     
     func loadQuestion(){
-        questionCount.text = "Question \(quiz.currentQuestion + 1)/\(quiz.total)"
-        questionTitleLabel.text = quiz.questions[quiz.currentQuestion].title as String
+        questionCountLabel.text = "\(quiz.currentQuestion + 1)/\(quiz.total)"
+        if let category = quiz.questions[quiz.currentQuestion].category, let questionTitle = quiz.questions[quiz.currentQuestion].title{
+            questionCategoryLabel.text = "Category: \(category)"
+            questionTitleLabel.text = "Question:\n\(questionTitle)"
+        }
+        
+        
         let answers = quiz.questions[quiz.currentQuestion].answers.shuffled()
         for (index, stackView) in answerButtonStackView.subviews.enumerated(){
             if let buttonStackView = stackView as? UIStackView{
@@ -83,6 +99,7 @@ class GameViewController: UIViewController {
         }
     }
     
+    //MARK: - Alerts
     func configureUIAnimation(with answer : Bool){
         if answer{
             print("correct")
@@ -91,4 +108,22 @@ class GameViewController: UIViewController {
         }
     }
     
+    
+    //MARK: - Timer
+    func stopTimer(){
+        runCount = 30
+    }
+    
+    func startTimer(){
+        timerLabel.text = "30"
+        timerLabel.sizeToFit()
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
+            self.runCount -= 1
+            
+            if self.runCount == 0{
+                print("Time expired")
+                timer.invalidate()
+            }
+        }
+    }
 }
