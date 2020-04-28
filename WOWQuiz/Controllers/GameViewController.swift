@@ -6,7 +6,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var questionTitleLabel: UILabel!
     @IBOutlet weak var questionCount: UILabel!
     @IBOutlet weak var answerButtonStackView: UIStackView!
-    @IBOutlet weak var backgroundImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,12 +37,6 @@ class GameViewController: UIViewController {
         questionTitleLabel.layer.cornerRadius = 5
         updateQuestionCountLabel()
         createQuitButton()
-        
-        if let random = K.backgroundImage.randomElement(){
-            backgroundImageView.image = UIImage(named: random)
-            backgroundImageView.alpha = 0.5
-        }
-        
     }
     
     func createQuitButton(){
@@ -78,9 +71,14 @@ class GameViewController: UIViewController {
         questionCount.text = "Question \(quiz.currentQuestion + 1)/\(quiz.total)"
         questionTitleLabel.text = quiz.questions[quiz.currentQuestion].title as String
         let answers = quiz.questions[quiz.currentQuestion].answers.shuffled()
-        for (index, buttonView) in answerButtonStackView.subviews.enumerated(){
-            if let button = buttonView as? UIButton{
-                button.setTitle(answers[index].title as String, for: .normal)
+        for (index, stackView) in answerButtonStackView.subviews.enumerated(){
+            if let buttonStackView = stackView as? UIStackView{
+                for button in buttonStackView.subviews{
+                    if let buttonView = button as? UIButton{
+                        buttonView.setTitle(answers[index].title as String, for: .normal)
+                        buttonView.layer.cornerRadius = 5
+                    }
+                }
             }
         }
     }

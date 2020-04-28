@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.88861454920000005" green="0.88861454920000005" blue="0.88861454920000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ac2-2Q-tvV" secondAttribute="bottom" id="89J-vx-sCd"/>
                             <constraint firstItem="ac2-2Q-tvV" firstAttribute="leading" secondItem="xyl-HC-1iq" secondAttribute="leading" id="HMx-Qd-lpx"/>
@@ -70,11 +70,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dLO-21-Ux0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EfO-W6-G9L">
-                                <rect key="frame" x="20" y="138" width="374" height="73.5"/>
+                                <rect key="frame" x="20" y="108" width="374" height="73.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7f-dE-yIt">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -90,59 +87,84 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="lV7-eX-aT8">
-                                <rect key="frame" x="20" y="261.5" width="374" height="219"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Nc6-J4-sy4">
+                                <rect key="frame" x="20" y="231.5" width="374" height="150"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpl-as-Xgr">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqU-7p-Gkt"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIK-Kz-mo7">
-                                        <rect key="frame" x="0.0" y="63" width="374" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HfG-67-lD9"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s7-5k-Zf0">
-                                        <rect key="frame" x="0.0" y="126" width="374" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jdp-0q-EmS"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVt-hq-dMd">
-                                        <rect key="frame" x="0.0" y="189" width="374" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ofh-5g-wYN"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-iJ-gj8">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="72.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpl-as-Xgr">
+                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="72.5"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="20"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqU-7p-Gkt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIK-Kz-mo7">
+                                                <rect key="frame" x="189.5" y="0.0" width="184.5" height="72.5"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="20"/>
+                                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HfG-67-lD9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4Ux-eq-Gg6">
+                                        <rect key="frame" x="0.0" y="77.5" width="374" height="72.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s7-5k-Zf0">
+                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="72.5"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="20"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jdp-0q-EmS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVt-hq-dMd">
+                                                <rect key="frame" x="189.5" y="0.0" width="184.5" height="72.5"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="20"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ofh-5g-wYN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="TZy-hi-mUw"/>
+                                </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lV7-eX-aT8" firstAttribute="top" secondItem="EfO-W6-G9L" secondAttribute="bottom" constant="50" id="2Qb-ci-Vqk"/>
-                            <constraint firstItem="lV7-eX-aT8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4FV-r9-doc"/>
-                            <constraint firstItem="EfO-W6-G9L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8Xz-Gx-FJr"/>
-                            <constraint firstItem="dLO-21-Ux0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DOC-JN-fCb"/>
-                            <constraint firstItem="dLO-21-Ux0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GrT-DX-LEL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EfO-W6-G9L" secondAttribute="trailing" constant="20" id="X3L-e8-1x8"/>
-                            <constraint firstAttribute="bottom" secondItem="dLO-21-Ux0" secondAttribute="bottom" id="aba-Kx-T0i"/>
-                            <constraint firstItem="dLO-21-Ux0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eRx-MS-eyY"/>
-                            <constraint firstItem="EfO-W6-G9L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="uWg-7g-VqK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lV7-eX-aT8" secondAttribute="trailing" constant="20" id="xUe-Tm-agB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nc6-J4-sy4" secondAttribute="trailing" constant="20" id="5Px-4x-UGV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EfO-W6-G9L" secondAttribute="trailing" constant="20" id="HhU-nO-m5l"/>
+                            <constraint firstItem="EfO-W6-G9L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nJX-4f-Ec1"/>
+                            <constraint firstItem="Nc6-J4-sy4" firstAttribute="top" secondItem="EfO-W6-G9L" secondAttribute="bottom" constant="50" id="nX1-cI-9cL"/>
+                            <constraint firstItem="Nc6-J4-sy4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="puP-JM-kCp"/>
+                            <constraint firstItem="EfO-W6-G9L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wiD-8u-wOc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="L5n-dG-vbA"/>
                     <connections>
-                        <outlet property="answerButtonStackView" destination="lV7-eX-aT8" id="VqH-ji-wOX"/>
-                        <outlet property="backgroundImageView" destination="dLO-21-Ux0" id="Fbs-aL-C5p"/>
+                        <outlet property="answerButtonStackView" destination="Nc6-J4-sy4" id="mao-t3-mJG"/>
                         <outlet property="questionCount" destination="A7f-dE-yIt" id="bbN-0V-sAj"/>
                         <outlet property="questionTitleLabel" destination="y09-2V-Fbu" id="MeE-0R-CZi"/>
                     </connections>

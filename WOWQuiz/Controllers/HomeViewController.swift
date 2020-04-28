@@ -9,6 +9,10 @@ class HomeViewController: UIViewController {
         let quizGame = Quiz(with: questions)
         return quizGame
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //DatabaseManager.sharedInstance.populateQuestion()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
