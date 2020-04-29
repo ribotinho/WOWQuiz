@@ -19,24 +19,21 @@ struct DatabaseManager {
      }
     
     func populateQuestion(){
-        let answer1 = Answer("hola", true)
-        let answer2 = Answer("hola2", false)
-        let answer3 = Answer("hola3", false)
-        let answer4 = Answer("hola4", false)
+        let answer1 = Answer(id: 2, "hola", true)
+        let answer2 = Answer(id: 2, "hola2", false)
+        let answer3 = Answer(id: 2, "hola3", false)
+        let answer4 = Answer(id: 2, "hola4", false)
         let list = List<Answer>()
         list.append(answer1)
         list.append(answer2)
         list.append(answer3)
         list.append(answer4)
         
-        let question = Question(id: 2, title: "això és una pregunta", level: 1, category: "rogue", correction: "hola", answers: list)
-        let question2 = Question(id: 3, title: "això és una altra pregunta", level: 1, category: "rogue", correction: "hola", answers: list)
-        let question3 = Question(id: 4, title: "això és una altra pregunta", level: 1, category: "rogue", correction: "hola", answers: list)
+        let question = Question(id: 2, title: "Who was XXXX", level: 1, category: "rogue", correction: "hola", answers: list)
+
         
         try! realm.write {
             realm.add(question)
-            realm.add(question2)
-            realm.add(question3)
         }
     }
     

@@ -14,6 +14,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var questionCategoryLabel: UILabel!
     @IBOutlet weak var answerButtonStackView: UIStackView!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet var answerButtonCollection: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +28,7 @@ class GameViewController: UIViewController {
         stopTimer()
         if let selectedButton = sender as? UIButton{
             if let buttonTitle = selectedButton.titleLabel?.text {
-                configureUIAnimation(with : quiz.isSelectedAnswerCorrect(for: buttonTitle))
-                quiz.nextQuestion()
-                if quiz.isFinished(){
-                    print("end of game")
-                }else{
-                    DispatchQueue.main.async {
-                        self.loadQuestion()
-                    }
-                }
+                showAlert(with : quiz.isSelectedAnswerCorrect(for: buttonTitle))
             }
         }
     }
@@ -85,25 +78,28 @@ class GameViewController: UIViewController {
             questionTitleLabel.text = "Question:\n\(questionTitle)"
         }
         
-        
         let answers = quiz.questions[quiz.currentQuestion].answers.shuffled()
-        for (index, stackView) in answerButtonStackView.subviews.enumerated(){
-            if let buttonStackView = stackView as? UIStackView{
-                for button in buttonStackView.subviews{
-                    if let buttonView = button as? UIButton{
-                        buttonView.setTitle(answers[index].title as String, for: .normal)
-                        buttonView.layer.cornerRadius = 5
-                    }
-                }
-            }
+        for (index, answerButton) in answerButtonCollection.enumerated(){
+            answerButton.setTitle(answers[index].title as String, for: .normal)
+            answerButton.layer.cornerRadius = 5
         }
+
     }
     
     //MARK: - Alerts
-    func configureUIAnimation(with answer : Bool){
+    func showAlert(with answer : Bool){
+        
+        stopTimer()
+        let storyboard = UIStoryboard(name: "Alert", bundle: .main)
+        let alertVC = storyboard.instantiateViewController(identifier: AlertViewController.identifier) as! AlertViewController
+        alertVC.delegate = self
+        alertVC.correct = answer
+        present(alertVC, animated: true, completion: nil)
+        
         if answer{
-            print("correct")
+            print("correct") // showing above alert
         }else{
+            //need to present another VC
             print("incorrect")
         }
     }
@@ -111,6 +107,7 @@ class GameViewController: UIViewController {
     
     //MARK: - Timer
     func stopTimer(){
+        timer.invalidate()
         runCount = 30
     }
     
@@ -126,4 +123,27 @@ class GameViewController: UIViewController {
             }
         }
     }
+}
+
+//MARK: - AlertDelegate
+
+extension GameViewController : AlertDelegate{
+    
+    func didTapNextQuestion() {
+        quiz.nextQuestion()
+        if quiz.isFinished(){
+            print("end of game")
+        }else{
+            print("next question")
+            DispatchQueue.main.async {
+                self.loadQuestion()
+                self.startTimer()
+            }
+        }
+    }
+    
+    func didFailQuestion() {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

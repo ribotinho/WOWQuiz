@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQV-8T-Ahd">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBD-ZR-tHV">
-                                <rect key="frame" x="119.5" y="702" width="175" height="60"/>
+                                <rect key="frame" x="119.66666666666669" y="702" width="175" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Gd8-KE-2rL"/>
                                     <constraint firstAttribute="width" constant="175" id="spp-4b-4nc"/>
@@ -71,16 +71,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="S0e-18-lJk">
-                                <rect key="frame" x="20" y="128" width="374" height="23.5"/>
+                                <rect key="frame" x="20" y="127.99999999999999" width="374" height="23.333333333333329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7f-dE-yIt">
-                                        <rect key="frame" x="0.0" y="0.0" width="187" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="23.333333333333332"/>
                                         <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRz-DM-09Y">
-                                        <rect key="frame" x="187" y="0.0" width="187" height="23.5"/>
+                                        <rect key="frame" x="187" y="0.0" width="187" height="23.333333333333332"/>
                                         <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -88,7 +88,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y09-2V-Fbu">
-                                <rect key="frame" x="20" y="156.5" width="374" height="24.5"/>
+                                <rect key="frame" x="20" y="156.33333333333334" width="374" height="24.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -97,10 +97,10 @@
                                 <rect key="frame" x="20" y="562" width="374" height="200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-iJ-gj8">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="97.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="97.666666666666671"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpl-as-Xgr">
-                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="97.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="184.66666666666666" height="97.666666666666671"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="20"/>
                                                 <state key="normal" title="Button">
@@ -111,7 +111,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIK-Kz-mo7">
-                                                <rect key="frame" x="189.5" y="0.0" width="184.5" height="97.5"/>
+                                                <rect key="frame" x="189.66666666666663" y="0.0" width="184.33333333333337" height="97.666666666666671"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="20"/>
                                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -125,10 +125,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4Ux-eq-Gg6">
-                                        <rect key="frame" x="0.0" y="102.5" width="374" height="97.5"/>
+                                        <rect key="frame" x="0.0" y="102.66666666666663" width="374" height="97.333333333333314"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s7-5k-Zf0">
-                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="97.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="184.66666666666666" height="97.333333333333329"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="20"/>
                                                 <state key="normal" title="Button">
@@ -139,7 +139,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVt-hq-dMd">
-                                                <rect key="frame" x="189.5" y="0.0" width="184.5" height="97.5"/>
+                                                <rect key="frame" x="189.66666666666663" y="0.0" width="184.33333333333337" height="97.333333333333329"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Morpheus" family="Morpheus" pointSize="20"/>
                                                 <state key="normal" title="Button">
@@ -157,7 +157,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClC-0B-o09">
-                                <rect key="frame" x="107.5" y="420.5" width="199" height="91.5"/>
+                                <rect key="frame" x="107.66666666666669" y="420.66666666666669" width="199" height="91.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="75"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -186,6 +186,10 @@
                         <outlet property="questionCountLabel" destination="lRz-DM-09Y" id="mfl-yj-Ljs"/>
                         <outlet property="questionTitleLabel" destination="y09-2V-Fbu" id="MeE-0R-CZi"/>
                         <outlet property="timerLabel" destination="ClC-0B-o09" id="AAz-9H-keo"/>
+                        <outletCollection property="answerButtonCollection" destination="jpl-as-Xgr" collectionClass="NSMutableArray" id="uTK-K6-s4O"/>
+                        <outletCollection property="answerButtonCollection" destination="1s7-5k-Zf0" collectionClass="NSMutableArray" id="ajb-3p-DjZ"/>
+                        <outletCollection property="answerButtonCollection" destination="lIK-Kz-mo7" collectionClass="NSMutableArray" id="q4t-zy-i5f"/>
+                        <outletCollection property="answerButtonCollection" destination="sVt-hq-dMd" collectionClass="NSMutableArray" id="nst-py-L7l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
