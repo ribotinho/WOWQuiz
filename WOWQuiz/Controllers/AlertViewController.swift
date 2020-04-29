@@ -1,10 +1,3 @@
-//
-//  AlertViewController.swift
-//  WOWQuiz
-//
-//  Created by Pau Ribot Pujolras on 29/04/2020.
-//  Copyright © 2020 Pau Ribot Pujolras. All rights reserved.
-//
 
 import UIKit
 
@@ -12,7 +5,10 @@ class AlertViewController: UIViewController {
     
     var delegate : AlertDelegate?
     var correct : Bool!
+    var answer : String!
     @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var checkImageView: UIImageView!
     @IBOutlet weak var headerTitleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
@@ -25,14 +21,29 @@ class AlertViewController: UIViewController {
     }
     
     func configureUI(){
+        headerView.backgroundColor = .clear
+        checkImageView.layer.cornerRadius = checkImageView.frame.size.width / 2
+        checkImageView.clipsToBounds = true
+        nextButton.layer.cornerRadius = 5
+        nextButton.setTitleColor(.black, for: .normal)
+
+        bodyLabel.text = answer
+        backView.layer.cornerRadius = 5
+        
         if correct{
+            checkImageView.image = UIImage(systemName: "checkmark.circle")
+            checkImageView.tintColor = .systemGreen
             headerTitleLabel.text = "CORRECT!"
-            headerView.backgroundColor = .green
-            nextButton.setTitle("Next question", for: .normal)
+            headerTitleLabel.textColor = .systemGreen
+            nextButton.setTitle("NEXT QUESTION", for: .normal)
+            nextButton.backgroundColor = .systemGreen
         }else{
+            checkImageView.image = UIImage(systemName: "multiply.circle")
+            checkImageView.tintColor = .systemRed
             headerTitleLabel.text = "INCORRECT!"
-            headerView.backgroundColor = .red
-            nextButton.setTitle("Try again!", for: .normal)
+            headerTitleLabel.textColor = .systemRed
+            nextButton.setTitle("TRY AGAIN", for: .normal)
+            nextButton.backgroundColor = .systemRed
         }
     }
     

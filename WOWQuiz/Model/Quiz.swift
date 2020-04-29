@@ -13,6 +13,7 @@ class Quiz {
         self.total = questions.count
     }
     
+    
     func isFinished() -> Bool{
         return currentQuestion < questions.count ? false : true
     }

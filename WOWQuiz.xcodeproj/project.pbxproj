@@ -10,6 +10,7 @@
 		5FAE31452455E5E1009F4F8F /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE31442455E5E1009F4F8F /* Answer.swift */; };
 		5FCD46DF2459AFCC00F71F7F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD46DE2459AFCC00F71F7F /* AlertViewController.swift */; };
 		5FCD46E12459AFDC00F71F7F /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCD46E02459AFDC00F71F7F /* Alert.storyboard */; };
+		5FCD46E32459CD2200F71F7F /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD46E22459CD2200F71F7F /* CongratulationsViewController.swift */; };
 		5FCFA5622456AB1900FE08D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCFA5612456AB1900FE08D8 /* HomeViewController.swift */; };
 		5FCFA56524570ECA00FE08D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCFA56424570ECA00FE08D8 /* Constants.swift */; };
 		5FCFA56724570F1E00FE08D8 /* LifeCraft_Font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FCFA56624570F1500FE08D8 /* LifeCraft_Font.ttf */; };
@@ -55,6 +56,7 @@
 		5FAE31442455E5E1009F4F8F /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		5FCD46DE2459AFCC00F71F7F /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		5FCD46E02459AFDC00F71F7F /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
+		5FCD46E22459CD2200F71F7F /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
 		5FCFA5612456AB1900FE08D8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5FCFA56424570ECA00FE08D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5FCFA56624570F1500FE08D8 /* LifeCraft_Font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LifeCraft_Font.ttf; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				5FEB536D2455D56200888FB4 /* GameViewController.swift */,
 				5FCFA5612456AB1900FE08D8 /* HomeViewController.swift */,
 				5FCD46DE2459AFCC00F71F7F /* AlertViewController.swift */,
+				5FCD46E22459CD2200F71F7F /* CongratulationsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				5FCFA5622456AB1900FE08D8 /* HomeViewController.swift in Sources */,
 				5FAE31452455E5E1009F4F8F /* Answer.swift in Sources */,
 				5FCFA5692457127700FE08D8 /* AnswerButton.swift in Sources */,
+				5FCD46E32459CD2200F71F7F /* CongratulationsViewController.swift in Sources */,
 				5FEB53692455D42000888FB4 /* Question.swift in Sources */,
 				5FCD46DF2459AFCC00F71F7F /* AlertViewController.swift in Sources */,
 				5FEB53382455D3ED00888FB4 /* AppDelegate.swift in Sources */,

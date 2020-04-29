@@ -12,7 +12,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var questionTitleLabel: UILabel!
     @IBOutlet weak var questionCountLabel: UILabel!
     @IBOutlet weak var questionCategoryLabel: UILabel!
-    @IBOutlet weak var answerButtonStackView: UIStackView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet var answerButtonCollection: [UIButton]!
     
@@ -28,7 +27,11 @@ class GameViewController: UIViewController {
         stopTimer()
         if let selectedButton = sender as? UIButton{
             if let buttonTitle = selectedButton.titleLabel?.text {
-                showAlert(with : quiz.isSelectedAnswerCorrect(for: buttonTitle))
+                if quiz.currentQuestion + 1 == quiz.total{
+                    performSegue(withIdentifier: "toCongratulations", sender: self)
+                }else{
+                    showAlert(with : quiz.isSelectedAnswerCorrect(for: buttonTitle))
+                }
             }
         }
     }
@@ -94,6 +97,8 @@ class GameViewController: UIViewController {
         let alertVC = storyboard.instantiateViewController(identifier: AlertViewController.identifier) as! AlertViewController
         alertVC.delegate = self
         alertVC.correct = answer
+        alertVC.answer = quiz.questions[quiz.currentQuestion].correction
+        
         present(alertVC, animated: true, completion: nil)
         
         if answer{
@@ -131,9 +136,7 @@ extension GameViewController : AlertDelegate{
     
     func didTapNextQuestion() {
         quiz.nextQuestion()
-        if quiz.isFinished(){
-            print("end of game")
-        }else{
+        if !quiz.isFinished(){
             print("next question")
             DispatchQueue.main.async {
                 self.loadQuestion()

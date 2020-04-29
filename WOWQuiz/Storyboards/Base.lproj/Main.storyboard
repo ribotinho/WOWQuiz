@@ -181,7 +181,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="L5n-dG-vbA"/>
                     <connections>
-                        <outlet property="answerButtonStackView" destination="Nc6-J4-sy4" id="mao-t3-mJG"/>
                         <outlet property="questionCategoryLabel" destination="A7f-dE-yIt" id="YCV-Ic-noD"/>
                         <outlet property="questionCountLabel" destination="lRz-DM-09Y" id="mfl-yj-Ljs"/>
                         <outlet property="questionTitleLabel" destination="y09-2V-Fbu" id="MeE-0R-CZi"/>
@@ -190,11 +189,45 @@
                         <outletCollection property="answerButtonCollection" destination="1s7-5k-Zf0" collectionClass="NSMutableArray" id="ajb-3p-DjZ"/>
                         <outletCollection property="answerButtonCollection" destination="lIK-Kz-mo7" collectionClass="NSMutableArray" id="q4t-zy-i5f"/>
                         <outletCollection property="answerButtonCollection" destination="sVt-hq-dMd" collectionClass="NSMutableArray" id="nst-py-L7l"/>
+                        <segue destination="gEA-kw-IdR" kind="show" identifier="toCongratulations" id="dUK-Jf-JTx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--Congratulations View Controller-->
+        <scene sceneID="wIV-hu-gE6">
+            <objects>
+                <viewController id="gEA-kw-IdR" customClass="CongratulationsViewController" customModule="WOWQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="egh-KD-Ua6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONGRATULATIONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP2-9m-so5">
+                                <rect key="frame" x="126.66666666666669" y="437.66666666666669" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COu-xQ-Tni">
+                                <rect key="frame" x="184" y="657" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cP2-9m-so5" firstAttribute="centerY" secondItem="egh-KD-Ua6" secondAttribute="centerY" id="2Z9-JS-0kL"/>
+                            <constraint firstItem="cP2-9m-so5" firstAttribute="centerX" secondItem="egh-KD-Ua6" secondAttribute="centerX" id="wKU-8g-vtQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I9z-DI-6yc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zm1-dk-DG3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8HI-TN-Q12" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1993" y="129"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c2u-EZ-ox1">
