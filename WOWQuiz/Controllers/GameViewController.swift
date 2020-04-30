@@ -3,17 +3,13 @@ import UIKit
 class GameViewController: UIViewController {
     
     var quiz : Quiz!
-    var timer : Timer!
-    var runCount : Int = 30{
-        didSet{
-            timerLabel.text = String(runCount)
-        }
-    }
+    var results = [String : Bool]()
     @IBOutlet weak var questionTitleLabel: UILabel!
     @IBOutlet weak var questionCountLabel: UILabel!
     @IBOutlet weak var questionCategoryLabel: UILabel!
-    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet var answerButtonCollection: [UIButton]!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var progressBar: AnswerProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,41 +19,54 @@ class GameViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
     }
     
-    @IBAction func answerSelected(_ sender: Any) {
-        stopTimer()
-        if let selectedButton = sender as? UIButton{
-            if let buttonTitle = selectedButton.titleLabel?.text {
-                if quiz.currentQuestion + 1 == quiz.total{
-                    performSegue(withIdentifier: "toCongratulations", sender: self)
-                }else{
-                    showAlert(with : quiz.isSelectedAnswerCorrect(for: buttonTitle))
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        
+        for selectedButton in answerButtonCollection{
+            if let button = selectedButton as? answerButton{
+                if button.hasBeenSelected{
+                    if let buttonTitle = button.titleLabel?.text{
+                        results[quiz.questions[quiz.currentQuestion].title] = quiz.isSelectedAnswerCorrect(for: buttonTitle)
+                        showAlert(with : quiz.isSelectedAnswerCorrect(for: buttonTitle))
+                    }
                 }
             }
         }
+        
+        
+    }
+    @IBAction func answerSelected(_ sender: answerButton) {
+        
+        for selectedButton in answerButtonCollection{
+            if let button = selectedButton as? answerButton{
+                if button == sender{
+                    button.hasBeenSelected = true
+                }else{
+                    if button.hasBeenSelected == true{
+                        button.hasBeenSelected = false
+                    }
+                }
+            }
+        }
+        
     }
     
+    //MARK: - UI
     func configureUI(){
         questionTitleLabel.numberOfLines = 0
-        questionTitleLabel.backgroundColor = UIColor.white.withAlphaComponent(0.75)
-        updateQuestionCountLabel()
-        createQuitButton()
-        startTimer()
+        nextButton.layer.cornerRadius = 5
+        
+        for button in answerButtonCollection{
+            button.layer.shadowColor = UIColor.gray.cgColor
+            button.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
+            button.layer.shadowOpacity = 5.0
+            button.layer.shadowRadius = 5
+            button.layer.masksToBounds = false
+            button.layer.cornerRadius = 5.0
+        }
+        progressBar.quitButton.addTarget(self, action: #selector(quitButtonTapped), for: .touchUpInside)
+        
     }
     
-    
-    
-    func createQuitButton(){
-        let quitButton = UIButton()
-        view.addSubview(quitButton)
-        quitButton.translatesAutoresizingMaskIntoConstraints = false
-        quitButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        quitButton.widthAnchor.constraint(equalToConstant: 25).isActive = true
-        quitButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
-        quitButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
-        quitButton.setBackgroundImage(UIImage(systemName: "multiply.circle.fill"), for: .normal)
-        quitButton.tintColor = .black
-        quitButton.addTarget(self, action: #selector(quitButtonTapped), for: .touchUpInside)
-    }
     
     @objc func quitButtonTapped( _ sender : UIButton){
         let alert = UIAlertController(title: "Quit Game", message: "Are you sure you want to quit?", preferredStyle: .alert)
@@ -70,7 +79,9 @@ class GameViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    //MARK: - Quiz game
     func updateQuestionCountLabel(){
+        progressBar.updateCurrentWidth()
         questionCountLabel.text = "\(quiz.currentQuestion + 1)/\(quiz.total)"
     }
     
@@ -82,50 +93,33 @@ class GameViewController: UIViewController {
         }
         
         let answers = quiz.questions[quiz.currentQuestion].answers.shuffled()
-        for (index, answerButton) in answerButtonCollection.enumerated(){
-            answerButton.setTitle(answers[index].title as String, for: .normal)
-            answerButton.layer.cornerRadius = 5
+        for (index, buttons) in answerButtonCollection.enumerated(){
+            if let button = buttons as? answerButton{
+                button.setTitle(answers[index].title as String, for: .normal)
+                button.layer.cornerRadius = 5
+                button.hasBeenSelected = false
+            }
         }
-
     }
     
     //MARK: - Alerts
     func showAlert(with answer : Bool){
         
-        stopTimer()
         let storyboard = UIStoryboard(name: "Alert", bundle: .main)
         let alertVC = storyboard.instantiateViewController(identifier: AlertViewController.identifier) as! AlertViewController
         alertVC.delegate = self
         alertVC.correct = answer
         alertVC.answer = quiz.questions[quiz.currentQuestion].correction
-        
         present(alertVC, animated: true, completion: nil)
-        
-        if answer{
-            print("correct") // showing above alert
-        }else{
-            //need to present another VC
-            print("incorrect")
-        }
     }
     
     
-    //MARK: - Timer
-    func stopTimer(){
-        timer.invalidate()
-        runCount = 30
-    }
+    //MARK: - Segueways
     
-    func startTimer(){
-        timerLabel.text = "30"
-        timerLabel.sizeToFit()
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
-            self.runCount -= 1
-            
-            if self.runCount == 0{
-                print("Time expired")
-                timer.invalidate()
-            }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCongratulations"{
+            let destionationVC = segue.destination as! CongratulationsViewController
+            destionationVC.quizResults = results
         }
     }
 }
@@ -135,18 +129,15 @@ class GameViewController: UIViewController {
 extension GameViewController : AlertDelegate{
     
     func didTapNextQuestion() {
+        updateQuestionCountLabel()
         quiz.nextQuestion()
         if !quiz.isFinished(){
-            print("next question")
             DispatchQueue.main.async {
                 self.loadQuestion()
-                self.startTimer()
             }
+        }else{
+            performSegue(withIdentifier: "toCongratulations", sender: self)
         }
-    }
-    
-    func didFailQuestion() {
-        navigationController?.popViewController(animated: true)
     }
     
 }

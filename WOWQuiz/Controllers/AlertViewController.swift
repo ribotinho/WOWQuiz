@@ -26,7 +26,8 @@ class AlertViewController: UIViewController {
         checkImageView.clipsToBounds = true
         nextButton.layer.cornerRadius = 5
         nextButton.setTitleColor(.black, for: .normal)
-
+        nextButton.setTitle("NEXT QUESTION", for: .normal)
+        nextButton.backgroundColor = .systemGray
         bodyLabel.text = answer
         backView.layer.cornerRadius = 5
         
@@ -35,31 +36,23 @@ class AlertViewController: UIViewController {
             checkImageView.tintColor = .systemGreen
             headerTitleLabel.text = "CORRECT!"
             headerTitleLabel.textColor = .systemGreen
-            nextButton.setTitle("NEXT QUESTION", for: .normal)
-            nextButton.backgroundColor = .systemGreen
+            
+            
         }else{
             checkImageView.image = UIImage(systemName: "multiply.circle")
             checkImageView.tintColor = .systemRed
             headerTitleLabel.text = "INCORRECT!"
             headerTitleLabel.textColor = .systemRed
-            nextButton.setTitle("TRY AGAIN", for: .normal)
-            nextButton.backgroundColor = .systemRed
         }
     }
     
     @IBAction func nextQuesstionButtonTapped(_ sender: Any) {
-        if correct{
-            dismiss(animated: true, completion: nil)
-            delegate?.didTapNextQuestion()
-        }else{
-            dismiss(animated: true, completion: nil)
-            delegate?.didFailQuestion()
-        }
+        dismiss(animated: true, completion: nil)
+        delegate?.didTapNextQuestion()
     }
     
 }
 
 protocol AlertDelegate {
     func didTapNextQuestion()
-    func didFailQuestion()
 }
