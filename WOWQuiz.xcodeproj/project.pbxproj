@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5FAE31452455E5E1009F4F8F /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE31442455E5E1009F4F8F /* Answer.swift */; };
-		5FCB693F245B0353003C8AD5 /* answerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB693E245B0353003C8AD5 /* answerButton.swift */; };
+		5FCB693F245B0353003C8AD5 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB693E245B0353003C8AD5 /* AnswerButton.swift */; };
 		5FCB6943245B1529003C8AD5 /* AnswerProgressview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB6942245B1529003C8AD5 /* AnswerProgressview.swift */; };
 		5FCD46DF2459AFCC00F71F7F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD46DE2459AFCC00F71F7F /* AlertViewController.swift */; };
 		5FCD46E12459AFDC00F71F7F /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCD46E02459AFDC00F71F7F /* Alert.storyboard */; };
@@ -55,7 +55,7 @@
 		324D9FA9B2533A228FF5197D /* Pods-WOWQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOWQuizTests.release.xcconfig"; path = "Target Support Files/Pods-WOWQuizTests/Pods-WOWQuizTests.release.xcconfig"; sourceTree = "<group>"; };
 		335307589F4D1815B9B87D89 /* Pods_WOWQuiz_WOWQuizUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WOWQuiz_WOWQuizUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FAE31442455E5E1009F4F8F /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
-		5FCB693E245B0353003C8AD5 /* answerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = answerButton.swift; sourceTree = "<group>"; };
+		5FCB693E245B0353003C8AD5 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		5FCB6942245B1529003C8AD5 /* AnswerProgressview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerProgressview.swift; sourceTree = "<group>"; };
 		5FCD46DE2459AFCC00F71F7F /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		5FCD46E02459AFDC00F71F7F /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				5FCFA56624570F1500FE08D8 /* LifeCraft_Font.ttf */,
 				5FCFA56A2457136A00FE08D8 /* Morpheus.ttf */,
 				5FCFA56424570ECA00FE08D8 /* Constants.swift */,
-				5FCB693E245B0353003C8AD5 /* answerButton.swift */,
+				5FCB693E245B0353003C8AD5 /* AnswerButton.swift */,
 				5FCB6942245B1529003C8AD5 /* AnswerProgressview.swift */,
 			);
 			path = "Supporting files";
@@ -494,7 +494,7 @@
 				5FEB53702455D87300888FB4 /* DatabaseManager.swift in Sources */,
 				5FCFA5622456AB1900FE08D8 /* HomeViewController.swift in Sources */,
 				5FAE31452455E5E1009F4F8F /* Answer.swift in Sources */,
-				5FCB693F245B0353003C8AD5 /* answerButton.swift in Sources */,
+				5FCB693F245B0353003C8AD5 /* AnswerButton.swift in Sources */,
 				5FCD46E32459CD2200F71F7F /* CongratulationsViewController.swift in Sources */,
 				5FCB6943245B1529003C8AD5 /* AnswerProgressview.swift in Sources */,
 				5FEB53692455D42000888FB4 /* Question.swift in Sources */,

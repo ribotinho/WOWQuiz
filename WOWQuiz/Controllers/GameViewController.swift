@@ -4,18 +4,20 @@ class GameViewController: UIViewController {
     
     var quiz : Quiz!
     var results = [String : Bool]()
+    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var questionTitleLabel: UILabel!
-    @IBOutlet weak var questionCountLabel: UILabel!
-    @IBOutlet weak var questionCategoryLabel: UILabel!
     @IBOutlet var answerButtonCollection: [UIButton]!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var progressBar: AnswerProgressView!
+    @IBOutlet weak var questionBackgroundView: UIView!
+    @IBOutlet weak var questionCountLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureUI()
         loadQuestion()
+        
         navigationController?.navigationBar.isHidden = true
     }
     
@@ -52,20 +54,20 @@ class GameViewController: UIViewController {
     
     //MARK: - UI
     func configureUI(){
+        view.backgroundColor = K.Colors.bluish
         questionTitleLabel.numberOfLines = 0
         nextButton.layer.cornerRadius = 5
-        
-        for button in answerButtonCollection{
-            button.layer.shadowColor = UIColor.gray.cgColor
-            button.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
-            button.layer.shadowOpacity = 5.0
-            button.layer.shadowRadius = 5
-            button.layer.masksToBounds = false
-            button.layer.cornerRadius = 5.0
-        }
+        nextButton.backgroundColor = K.Colors.yellow
+        nextButton.titleLabel?.textColor = .white
         progressBar.quitButton.addTarget(self, action: #selector(quitButtonTapped), for: .touchUpInside)
+        questionBackgroundView.layer.cornerRadius = 25
+        questionBackgroundView.backgroundColor = .white
+        questionBackgroundView.layer.borderColor = K.Colors.yellow.cgColor
+        questionBackgroundView.layer.borderWidth = 3
         
     }
+    
+    
     
     
     @objc func quitButtonTapped( _ sender : UIButton){
@@ -81,15 +83,16 @@ class GameViewController: UIViewController {
     
     //MARK: - Quiz game
     func updateQuestionCountLabel(){
+        questionCountLabel.text = "Question \(quiz.currentQuestion + 1) of \(quiz.total)"
+        categoryLabel.text = quiz.questions[quiz.currentQuestion].category
         progressBar.updateCurrentWidth()
-        questionCountLabel.text = "\(quiz.currentQuestion + 1)/\(quiz.total)"
     }
     
     func loadQuestion(){
-        questionCountLabel.text = "\(quiz.currentQuestion + 1)/\(quiz.total)"
-        if let category = quiz.questions[quiz.currentQuestion].category, let questionTitle = quiz.questions[quiz.currentQuestion].title{
-            questionCategoryLabel.text = "Category: \(category)"
-            questionTitleLabel.text = "Question:\n\(questionTitle)"
+        if let questionTitle = quiz.questions[quiz.currentQuestion].title{
+            questionTitleLabel.text = questionTitle
+            questionCountLabel.text = "Question \(quiz.currentQuestion + 1) of \(quiz.total)"
+            categoryLabel.text = quiz.questions[quiz.currentQuestion].category.uppercased()
         }
         
         let answers = quiz.questions[quiz.currentQuestion].answers.shuffled()

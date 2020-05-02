@@ -4,11 +4,10 @@ import RealmSwift
 class Quiz {
     var questions : Results<Question>!
     var total : Int = 0
-    var currentQuestion : Int!
+    var currentQuestion : Int = 0
     
     convenience init(with questions : Results<Question>) {
         self.init()
-        self.currentQuestion = 0
         self.questions = questions
         self.total = questions.count
     }

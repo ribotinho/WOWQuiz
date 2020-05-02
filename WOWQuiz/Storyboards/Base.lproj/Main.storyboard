@@ -67,104 +67,125 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thumb-1920-196720" translatesAutoresizingMaskIntoConstraints="NO" id="ljC-1Q-zdZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0Q-Yn-VvH" customClass="AnswerProgressView" customModule="WOWQuiz" customModuleProvider="target">
-                                <rect key="frame" x="40" y="50" width="334" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1T4-92-Na4">
+                                <rect key="frame" x="20" y="113" width="374" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQk-AI-ec6">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="26"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0Q-Yn-VvH" customClass="AnswerProgressView" customModule="WOWQuiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="31" width="374" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="m0Q-Yn-VvH" firstAttribute="leading" secondItem="1T4-92-Na4" secondAttribute="leading" id="0Gz-EI-I4m"/>
+                                    <constraint firstAttribute="bottom" secondItem="m0Q-Yn-VvH" secondAttribute="bottom" id="4wM-Iu-3gw"/>
+                                    <constraint firstAttribute="trailing" secondItem="m0Q-Yn-VvH" secondAttribute="trailing" id="Kr2-8G-H02"/>
+                                    <constraint firstItem="YQk-AI-ec6" firstAttribute="top" secondItem="1T4-92-Na4" secondAttribute="top" id="ML7-eh-U05"/>
+                                    <constraint firstAttribute="height" constant="75" id="hHC-yj-dLP"/>
+                                    <constraint firstItem="YQk-AI-ec6" firstAttribute="leading" secondItem="1T4-92-Na4" secondAttribute="leading" id="tNR-bg-X5T"/>
+                                    <constraint firstAttribute="trailing" secondItem="YQk-AI-ec6" secondAttribute="trailing" id="uGN-7D-QUK"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qki-YQ-hHM">
+                                <rect key="frame" x="20" y="238" width="374" height="508"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="scE-iw-ULh">
+                                        <rect key="frame" x="20" y="10" width="334" height="70.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgB-36-wp9">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="39"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y09-2V-Fbu">
+                                                <rect key="frame" x="0.0" y="47" width="334" height="23.666666666666671"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nc6-J4-sy4">
+                                        <rect key="frame" x="16" y="292" width="342" height="200"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-iJ-gj8">
+                                                <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpl-as-Xgr" customClass="answerButton" customModule="WOWQuiz" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="166" height="95"/>
+                                                        <color key="backgroundColor" white="0.19012250589999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqU-7p-Gkt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIK-Kz-mo7" customClass="answerButton" customModule="WOWQuiz" customModuleProvider="target">
+                                                        <rect key="frame" x="176" y="0.0" width="166" height="95"/>
+                                                        <color key="backgroundColor" red="0.1913502514" green="0.19138368959999999" blue="0.19134292010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HfG-67-lD9"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Ux-eq-Gg6">
+                                                <rect key="frame" x="0.0" y="105" width="342" height="95"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s7-5k-Zf0" customClass="answerButton" customModule="WOWQuiz" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="166" height="95"/>
+                                                        <color key="backgroundColor" white="0.19012250589999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jdp-0q-EmS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVt-hq-dMd" customClass="answerButton" customModule="WOWQuiz" customModuleProvider="target">
+                                                        <rect key="frame" x="176" y="0.0" width="166" height="95"/>
+                                                        <color key="backgroundColor" white="0.19012250589999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ofh-5g-wYN"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="TZy-hi-mUw"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="fKN-vV-TVl"/>
+                                    <constraint firstItem="scE-iw-ULh" firstAttribute="leading" secondItem="Qki-YQ-hHM" secondAttribute="leading" constant="20" id="5dM-ju-Evx"/>
+                                    <constraint firstAttribute="trailing" secondItem="scE-iw-ULh" secondAttribute="trailing" constant="20" id="5lZ-uk-3Vm"/>
+                                    <constraint firstItem="scE-iw-ULh" firstAttribute="top" secondItem="Qki-YQ-hHM" secondAttribute="top" constant="10" id="QGQ-lh-CdQ"/>
+                                    <constraint firstItem="Nc6-J4-sy4" firstAttribute="leading" secondItem="Qki-YQ-hHM" secondAttribute="leading" constant="16" id="gu9-ly-eqA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nc6-J4-sy4" secondAttribute="trailing" constant="16" id="u3Q-9j-TxX"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nc6-J4-sy4" secondAttribute="bottom" constant="16" id="wVe-nr-FqN"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="S0e-18-lJk">
-                                <rect key="frame" x="20" y="127.99999999999999" width="374" height="22.333333333333329"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7f-dE-yIt">
-                                        <rect key="frame" x="0.0" y="0.0" width="187" height="22.333333333333332"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRz-DM-09Y">
-                                        <rect key="frame" x="187" y="0.0" width="187" height="22.333333333333332"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y09-2V-Fbu">
-                                <rect key="frame" x="20" y="155.33333333333334" width="374" height="23.666666666666657"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nc6-J4-sy4">
-                                <rect key="frame" x="20" y="562" width="374" height="200"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-iJ-gj8">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="95"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpl-as-Xgr" customClass="answerButton" customModule="WOWQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="182" height="95"/>
-                                                <color key="backgroundColor" white="0.19012250589999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                                <state key="normal" title="Button">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqU-7p-Gkt"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIK-Kz-mo7" customClass="answerButton" customModule="WOWQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="192" y="0.0" width="182" height="95"/>
-                                                <color key="backgroundColor" red="0.1913502514" green="0.19138368959999999" blue="0.19134292010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HfG-67-lD9"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Ux-eq-Gg6">
-                                        <rect key="frame" x="0.0" y="105" width="374" height="95"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s7-5k-Zf0" customClass="answerButton" customModule="WOWQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="182" height="95"/>
-                                                <color key="backgroundColor" white="0.19012250589999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                                <state key="normal" title="Button">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jdp-0q-EmS"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVt-hq-dMd" customClass="answerButton" customModule="WOWQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="192" y="0.0" width="182" height="95"/>
-                                                <color key="backgroundColor" white="0.19012250589999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                                <state key="normal" title="Button">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ofh-5g-wYN"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="TZy-hi-mUw"/>
-                                </constraints>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiP-5A-5ca">
                                 <rect key="frame" x="132" y="796" width="150" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -183,33 +204,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y09-2V-Fbu" secondAttribute="trailing" constant="20" id="1h3-3i-sgq"/>
-                            <constraint firstItem="m0Q-Yn-VvH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="3hc-ZD-8xq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nc6-J4-sy4" secondAttribute="trailing" constant="20" id="5Px-4x-UGV"/>
+                            <constraint firstItem="hiP-5A-5ca" firstAttribute="top" secondItem="Qki-YQ-hHM" secondAttribute="bottom" constant="50" id="2iy-BJ-2si"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qki-YQ-hHM" secondAttribute="trailing" constant="20" id="5Yc-Al-oDk"/>
                             <constraint firstAttribute="bottom" secondItem="hiP-5A-5ca" secondAttribute="bottom" constant="50" id="6fb-ob-zwj"/>
-                            <constraint firstItem="S0e-18-lJk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="aC6-wC-Mze"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m0Q-Yn-VvH" secondAttribute="trailing" constant="40" id="bjv-3W-9q7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S0e-18-lJk" secondAttribute="trailing" constant="20" id="gD8-cw-DOD"/>
-                            <constraint firstItem="m0Q-Yn-VvH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="gJS-7m-wra"/>
-                            <constraint firstItem="y09-2V-Fbu" firstAttribute="top" secondItem="S0e-18-lJk" secondAttribute="bottom" constant="5" id="h5w-Wr-OLB"/>
-                            <constraint firstItem="Nc6-J4-sy4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="puP-JM-kCp"/>
-                            <constraint firstItem="S0e-18-lJk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sLt-zd-ass"/>
-                            <constraint firstItem="y09-2V-Fbu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tP3-8L-fxV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nc6-J4-sy4" secondAttribute="bottom" constant="100" id="yLE-mL-Ioh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1T4-92-Na4" secondAttribute="trailing" constant="20" id="9vk-zz-qPa"/>
+                            <constraint firstItem="1T4-92-Na4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="25" id="9vz-vO-Uqv"/>
+                            <constraint firstItem="Qki-YQ-hHM" firstAttribute="top" secondItem="1T4-92-Na4" secondAttribute="bottom" constant="50" id="Lgp-Tj-wJ4"/>
+                            <constraint firstItem="Qki-YQ-hHM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Oze-SY-G30"/>
+                            <constraint firstItem="1T4-92-Na4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mvO-fX-QvB"/>
                             <constraint firstItem="hiP-5A-5ca" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zZ5-Pf-IBB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="L5n-dG-vbA"/>
                     <connections>
+                        <outlet property="categoryLabel" destination="wgB-36-wp9" id="A6p-D6-SQa"/>
                         <outlet property="nextButton" destination="hiP-5A-5ca" id="hKi-NQ-lK4"/>
                         <outlet property="progressBar" destination="m0Q-Yn-VvH" id="btY-ra-C9X"/>
-                        <outlet property="questionCategoryLabel" destination="A7f-dE-yIt" id="YCV-Ic-noD"/>
-                        <outlet property="questionCountLabel" destination="lRz-DM-09Y" id="mfl-yj-Ljs"/>
+                        <outlet property="questionBackgroundView" destination="Qki-YQ-hHM" id="u4g-1R-z0w"/>
+                        <outlet property="questionCountLabel" destination="YQk-AI-ec6" id="ay7-cA-ASu"/>
                         <outlet property="questionTitleLabel" destination="y09-2V-Fbu" id="MeE-0R-CZi"/>
-                        <outletCollection property="answerButtonCollection" destination="jpl-as-Xgr" collectionClass="NSMutableArray" id="uTK-K6-s4O"/>
                         <outletCollection property="answerButtonCollection" destination="1s7-5k-Zf0" collectionClass="NSMutableArray" id="ajb-3p-DjZ"/>
                         <outletCollection property="answerButtonCollection" destination="lIK-Kz-mo7" collectionClass="NSMutableArray" id="q4t-zy-i5f"/>
+                        <outletCollection property="answerButtonCollection" destination="jpl-as-Xgr" collectionClass="NSMutableArray" id="uTK-K6-s4O"/>
                         <outletCollection property="answerButtonCollection" destination="sVt-hq-dMd" collectionClass="NSMutableArray" id="nst-py-L7l"/>
                         <segue destination="gEA-kw-IdR" kind="show" identifier="toCongratulations" id="dUK-Jf-JTx"/>
                     </connections>
@@ -312,6 +329,5 @@
     <resources>
         <image name="grey-dark-vintage-background-texture" width="1263" height="744"/>
         <image name="n7p6f1a7rqg11" width="3840" height="2160"/>
-        <image name="thumb-1920-196720" width="1920" height="1152"/>
     </resources>
 </document>
