@@ -6,7 +6,7 @@ class AnswerProgressView: UIView {
     var current : Int = 0
     var quitButton : UIButton!
     var progressview : UIView!
-    var progressBarWidth : CGFloat = 50
+    var progressBarWidth : CGFloat = 150
     var widthConstraint = NSLayoutConstraint()
     
     required init?(coder: NSCoder) {
@@ -33,6 +33,11 @@ class AnswerProgressView: UIView {
         progressview.widthAnchor.constraint(equalToConstant: progressBarWidth).isActive = true
         progressview.layer.cornerRadius = 15
         progressview.backgroundColor = K.Colors.yellow
+        
+        layer.shadowColor = K.Colors.darkBlue.cgColor
+        layer.shadowOffset = .zero
+        layer.shadowRadius = 15
+        layer.shadowOpacity = 0.8
     }
     
     func configureButton(){
@@ -60,6 +65,11 @@ class AnswerProgressView: UIView {
         }
         
         print("width \(progressview.frame.size.width)")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        progressview.applyGradient(with: [K.Colors.yellow, K.Colors.orange], cornerRadius: 15)
     }
 
 }

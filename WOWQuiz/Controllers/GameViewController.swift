@@ -5,9 +5,10 @@ class GameViewController: UIViewController {
     var quiz : Quiz!
     var results = [String : Bool]()
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var questionBackgroundImageView: UIImageView!
+    @IBOutlet weak var nextButtonView: NextButton!
     @IBOutlet weak var questionTitleLabel: UILabel!
     @IBOutlet var answerButtonCollection: [UIButton]!
-    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var progressBar: AnswerProgressView!
     @IBOutlet weak var questionBackgroundView: UIView!
     @IBOutlet weak var questionCountLabel: UILabel!
@@ -21,7 +22,7 @@ class GameViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
     }
     
-    @IBAction func nextButtonTapped(_ sender: Any) {
+    @objc func nextButtonTapped(_ sender: UIButton) {
         
         for selectedButton in answerButtonCollection{
             if let button = selectedButton as? answerButton{
@@ -54,16 +55,20 @@ class GameViewController: UIViewController {
     
     //MARK: - UI
     func configureUI(){
-        view.backgroundColor = K.Colors.bluish
+        view.backgroundColor = K.Colors.grayQuest
+        questionBackgroundImageView.layer.cornerRadius = 15
         questionTitleLabel.numberOfLines = 0
-        nextButton.layer.cornerRadius = 5
-        nextButton.backgroundColor = K.Colors.yellow
-        nextButton.titleLabel?.textColor = .white
         progressBar.quitButton.addTarget(self, action: #selector(quitButtonTapped), for: .touchUpInside)
         questionBackgroundView.layer.cornerRadius = 25
-        questionBackgroundView.backgroundColor = .white
-        questionBackgroundView.layer.borderColor = K.Colors.yellow.cgColor
-        questionBackgroundView.layer.borderWidth = 3
+        questionBackgroundView.backgroundColor = .clear
+        //questionBackgroundView.layer.borderColor = K.Colors.yellow.cgColor
+        //questionBackgroundView.layer.borderWidth = 3
+        questionBackgroundView.layer.shadowColor = K.Colors.darkBlue.cgColor
+        questionBackgroundView.layer.shadowOffset = .zero
+        questionBackgroundView.layer.shadowRadius = 15
+        questionBackgroundView.layer.shadowOpacity = 0.8
+        
+        nextButtonView.button.addTarget(self, action: #selector(nextButtonTapped(_:)), for: .touchUpInside)
         
     }
     
@@ -99,7 +104,6 @@ class GameViewController: UIViewController {
         for (index, buttons) in answerButtonCollection.enumerated(){
             if let button = buttons as? answerButton{
                 button.setTitle(answers[index].title as String, for: .normal)
-                button.layer.cornerRadius = 5
                 button.hasBeenSelected = false
             }
         }

@@ -71,14 +71,17 @@
                                 <rect key="frame" x="20" y="113" width="374" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQk-AI-ec6">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="26"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0Q-Yn-VvH" customClass="AnswerProgressView" customModule="WOWQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="31" width="374" height="44"/>
+                                        <rect key="frame" x="0.0" y="45" width="374" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="bRg-q4-9tq"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -91,8 +94,11 @@
                                     <constraint firstAttribute="trailing" secondItem="YQk-AI-ec6" secondAttribute="trailing" id="uGN-7D-QUK"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d2nym1x-43432ba4-3ebb-4429-be28-b9d6ab3b6f99" translatesAutoresizingMaskIntoConstraints="NO" id="qug-NQ-7uD">
+                                <rect key="frame" x="20" y="238" width="374" height="528"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qki-YQ-hHM">
-                                <rect key="frame" x="20" y="238" width="374" height="508"/>
+                                <rect key="frame" x="20" y="238" width="374" height="528"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="scE-iw-ULh">
                                         <rect key="frame" x="20" y="10" width="334" height="70.666666666666671"/>
@@ -113,30 +119,26 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nc6-J4-sy4">
-                                        <rect key="frame" x="16" y="292" width="342" height="200"/>
+                                        <rect key="frame" x="20" y="308" width="334" height="200"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-iJ-gj8">
-                                                <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="95"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpl-as-Xgr" customClass="answerButton" customModule="WOWQuiz" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="166" height="95"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="162" height="95"/>
                                                         <color key="backgroundColor" white="0.19012250589999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                                        <state key="normal" title="Button">
-                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
+                                                        <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqU-7p-Gkt"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIK-Kz-mo7" customClass="answerButton" customModule="WOWQuiz" customModuleProvider="target">
-                                                        <rect key="frame" x="176" y="0.0" width="166" height="95"/>
+                                                        <rect key="frame" x="172" y="0.0" width="162" height="95"/>
                                                         <color key="backgroundColor" red="0.1913502514" green="0.19138368959999999" blue="0.19134292010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Button">
-                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
+                                                        <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HfG-67-lD9"/>
                                                         </connections>
@@ -144,26 +146,22 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Ux-eq-Gg6">
-                                                <rect key="frame" x="0.0" y="105" width="342" height="95"/>
+                                                <rect key="frame" x="0.0" y="105" width="334" height="95"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s7-5k-Zf0" customClass="answerButton" customModule="WOWQuiz" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="166" height="95"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="162" height="95"/>
                                                         <color key="backgroundColor" white="0.19012250589999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                                        <state key="normal" title="Button">
-                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
+                                                        <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jdp-0q-EmS"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVt-hq-dMd" customClass="answerButton" customModule="WOWQuiz" customModuleProvider="target">
-                                                        <rect key="frame" x="176" y="0.0" width="166" height="95"/>
+                                                        <rect key="frame" x="172" y="0.0" width="162" height="95"/>
                                                         <color key="backgroundColor" white="0.19012250589999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                                        <state key="normal" title="Button">
-                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
+                                                        <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="answerSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ofh-5g-wYN"/>
                                                         </connections>
@@ -181,46 +179,44 @@
                                     <constraint firstItem="scE-iw-ULh" firstAttribute="leading" secondItem="Qki-YQ-hHM" secondAttribute="leading" constant="20" id="5dM-ju-Evx"/>
                                     <constraint firstAttribute="trailing" secondItem="scE-iw-ULh" secondAttribute="trailing" constant="20" id="5lZ-uk-3Vm"/>
                                     <constraint firstItem="scE-iw-ULh" firstAttribute="top" secondItem="Qki-YQ-hHM" secondAttribute="top" constant="10" id="QGQ-lh-CdQ"/>
-                                    <constraint firstItem="Nc6-J4-sy4" firstAttribute="leading" secondItem="Qki-YQ-hHM" secondAttribute="leading" constant="16" id="gu9-ly-eqA"/>
-                                    <constraint firstAttribute="trailing" secondItem="Nc6-J4-sy4" secondAttribute="trailing" constant="16" id="u3Q-9j-TxX"/>
-                                    <constraint firstAttribute="bottom" secondItem="Nc6-J4-sy4" secondAttribute="bottom" constant="16" id="wVe-nr-FqN"/>
+                                    <constraint firstItem="Nc6-J4-sy4" firstAttribute="leading" secondItem="Qki-YQ-hHM" secondAttribute="leading" constant="20" id="gu9-ly-eqA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nc6-J4-sy4" secondAttribute="trailing" constant="20" id="u3Q-9j-TxX"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nc6-J4-sy4" secondAttribute="bottom" constant="20" id="wVe-nr-FqN"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiP-5A-5ca">
-                                <rect key="frame" x="132" y="796" width="150" height="50"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2mq-gn-YAD" customClass="NextButton" customModule="WOWQuiz" customModuleProvider="target">
+                                <rect key="frame" x="50" y="796" width="314" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="DZK-sX-rmH"/>
-                                    <constraint firstAttribute="width" constant="150" id="rSe-vv-ACR"/>
+                                    <constraint firstAttribute="height" constant="50" id="DBW-PT-MOP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <state key="normal" title="NEXT">
-                                    <color key="titleColor" white="0.19012250589999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RiJ-Z5-rBp"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hiP-5A-5ca" firstAttribute="top" secondItem="Qki-YQ-hHM" secondAttribute="bottom" constant="50" id="2iy-BJ-2si"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qki-YQ-hHM" secondAttribute="trailing" constant="20" id="5Yc-Al-oDk"/>
-                            <constraint firstAttribute="bottom" secondItem="hiP-5A-5ca" secondAttribute="bottom" constant="50" id="6fb-ob-zwj"/>
+                            <constraint firstItem="qug-NQ-7uD" firstAttribute="top" secondItem="1T4-92-Na4" secondAttribute="bottom" constant="50" id="8SY-j5-mY6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1T4-92-Na4" secondAttribute="trailing" constant="20" id="9vk-zz-qPa"/>
                             <constraint firstItem="1T4-92-Na4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="25" id="9vz-vO-Uqv"/>
+                            <constraint firstItem="qug-NQ-7uD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IxQ-im-ndb"/>
                             <constraint firstItem="Qki-YQ-hHM" firstAttribute="top" secondItem="1T4-92-Na4" secondAttribute="bottom" constant="50" id="Lgp-Tj-wJ4"/>
                             <constraint firstItem="Qki-YQ-hHM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Oze-SY-G30"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qug-NQ-7uD" secondAttribute="trailing" constant="20" id="YUJ-91-aSV"/>
+                            <constraint firstItem="2mq-gn-YAD" firstAttribute="top" secondItem="qug-NQ-7uD" secondAttribute="bottom" constant="30" id="f4a-x1-dVO"/>
+                            <constraint firstItem="2mq-gn-YAD" firstAttribute="top" secondItem="Qki-YQ-hHM" secondAttribute="bottom" constant="30" id="kOr-xK-71s"/>
                             <constraint firstItem="1T4-92-Na4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mvO-fX-QvB"/>
-                            <constraint firstItem="hiP-5A-5ca" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zZ5-Pf-IBB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2mq-gn-YAD" secondAttribute="trailing" constant="50" id="rFL-cO-vuy"/>
+                            <constraint firstAttribute="bottom" secondItem="2mq-gn-YAD" secondAttribute="bottom" constant="50" id="s55-Yr-NxO"/>
+                            <constraint firstItem="2mq-gn-YAD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="syV-yz-prD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="L5n-dG-vbA"/>
                     <connections>
                         <outlet property="categoryLabel" destination="wgB-36-wp9" id="A6p-D6-SQa"/>
-                        <outlet property="nextButton" destination="hiP-5A-5ca" id="hKi-NQ-lK4"/>
+                        <outlet property="nextButtonView" destination="2mq-gn-YAD" id="bSe-oH-uGt"/>
                         <outlet property="progressBar" destination="m0Q-Yn-VvH" id="btY-ra-C9X"/>
+                        <outlet property="questionBackgroundImageView" destination="qug-NQ-7uD" id="TvM-rN-COm"/>
                         <outlet property="questionBackgroundView" destination="Qki-YQ-hHM" id="u4g-1R-z0w"/>
                         <outlet property="questionCountLabel" destination="YQk-AI-ec6" id="ay7-cA-ASu"/>
                         <outlet property="questionTitleLabel" destination="y09-2V-Fbu" id="MeE-0R-CZi"/>
@@ -327,6 +323,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="d2nym1x-43432ba4-3ebb-4429-be28-b9d6ab3b6f99" width="1600" height="1280"/>
         <image name="grey-dark-vintage-background-texture" width="1263" height="744"/>
         <image name="n7p6f1a7rqg11" width="3840" height="2160"/>
     </resources>
