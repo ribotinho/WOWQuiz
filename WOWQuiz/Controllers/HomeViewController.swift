@@ -13,6 +13,10 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         //DatabaseManager.sharedInstance.populateQuestion()
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

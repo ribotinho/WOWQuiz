@@ -4,8 +4,9 @@ import UIKit
 class AlertViewController: UIViewController {
     
     var delegate : AlertDelegate?
-    var correct : Bool!
+    var correct : String!
     var answer : String!
+    var isLast : Bool!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var checkImageView: UIImageView!
@@ -26,22 +27,28 @@ class AlertViewController: UIViewController {
         checkImageView.clipsToBounds = true
         nextButton.layer.cornerRadius = 5
         nextButton.setTitleColor(.black, for: .normal)
-        nextButton.setTitle("NEXT QUESTION", for: .normal)
+        nextButton.setTitle(isLast ? "VIEW RESULTS" : "NEXT QUESTION", for: .normal)
         nextButton.backgroundColor = .systemGray
         bodyLabel.text = answer
         backView.layer.cornerRadius = 5
         
-        if correct{
+        if correct == "Correct" {
             checkImageView.image = UIImage(systemName: "checkmark.circle")
             checkImageView.tintColor = .systemGreen
             headerTitleLabel.text = "CORRECT!"
             headerTitleLabel.textColor = .systemGreen
             
             
-        }else{
+        }else if correct == "False" {
             checkImageView.image = UIImage(systemName: "multiply.circle")
             checkImageView.tintColor = .systemRed
             headerTitleLabel.text = "INCORRECT!"
+            headerTitleLabel.textColor = .systemRed
+            
+        }else{
+            checkImageView.image = UIImage(systemName: "timer")
+            checkImageView.tintColor = .systemRed
+            headerTitleLabel.text = "TIME'S UP!"
             headerTitleLabel.textColor = .systemRed
         }
     }

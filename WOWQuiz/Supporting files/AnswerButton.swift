@@ -3,57 +3,66 @@ import UIKit
 
 class answerButton: UIButton {
     
-    let checkImageView : UIImageView = UIImageView(image: UIImage(systemName: "circle"))
-    var hasBeenSelected : Bool = false {
-        didSet{
-            if hasBeenSelected{
-                checkImageView.image = UIImage(systemName: "checkmark.circle.fill")
-                configureSelectedButton()
-            }else{
-               checkImageView.image = UIImage(systemName: "circle")
-                configureUnselectedButton()
-            }
-        }
-    }
-    
+    var checkImageView : UIImageView!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        configureImage()
     }
     
-    func configureSelectedButton(){
-        checkImageView.tintColor = K.Colors.yellow
-        titleLabel?.textColor = K.Colors.yellow
-        layer.borderWidth = 3
-        layer.borderColor = K.Colors.yellow.cgColor
-        backgroundColor = K.Colors.redQuest
+    required override init(frame: CGRect) {
+        super.init(frame: frame)
+        configureButton()
     }
     
-     func configureUnselectedButton() {
-        checkImageView.tintColor = .lightGray
-        backgroundColor = K.Colors.grayQuest
-        titleLabel?.textColor = UIColor.lightGray
-        layer.borderWidth = 3
-        layer.borderColor = UIColor.lightGray.cgColor
-    }
-    
-    func configureImage(){
+     private func configureButton() {
         layer.cornerRadius = 15
+        setTitleColor(.white, for: .normal)
+        layer.borderWidth = 3
+        layer.borderColor = UIColor.black.cgColor
+        //applyGradient(with: [K.Colors.brown, K.Colors.darkbrown], cornerRadius: 15)
+        setBackgroundImage(UIImage(named: "button background"), for: .normal)
+        titleLabel?.font = UIFont(name: "Futura", size: 20.0)
+    }
+    
+
+    
+    private func configureImage(with image : String, with color : UIColor){
+        checkImageView = UIImageView(image: UIImage(systemName: image))
         addSubview(checkImageView)
+        checkImageView.tintColor = color
         checkImageView.translatesAutoresizingMaskIntoConstraints = false
-        checkImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        checkImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
-        checkImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5).isActive = true
-        checkImageView.topAnchor.constraint(equalTo: topAnchor, constant: 5).isActive = true
+        checkImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        checkImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        checkImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        checkImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
+    }
+    
+    public func reset(){
+        if checkImageView != nil {
+            checkImageView.removeFromSuperview()
+        }
+        applyGradient(with: [K.Colors.brown, K.Colors.darkbrown], cornerRadius: 15)
+    }
+    
+    public func blink(for answer : Bool){
+        self.alpha = 0.2
+        UIView.animate(withDuration: 0.2, animations: {
+            UIView.modifyAnimations(withRepeatCount: 3, autoreverses: true) {
+                self.alpha = 1.0
+            }
+        }) { (isFinished) in
+            if answer{
+                self.configureImage(with: "checkmark.circle", with: .green)
+            }else{
+                self.configureImage(with: "multiply.circle", with: .red)
+            }
+        }
+        
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        if hasBeenSelected{
-            configureSelectedButton()
-        }else{
-            configureUnselectedButton()
-        }
+        applyGradient(with: [K.Colors.brown, K.Colors.darkbrown], cornerRadius: 15)
+        
     }
 }

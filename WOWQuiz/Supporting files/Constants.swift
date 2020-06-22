@@ -20,6 +20,8 @@ struct K {
         static let orange = UIColor(red: 255/255, green: 116/255, blue: 23/255, alpha: 1)
         static let redQuest = UIColor(red: 100/255, green: 10/255, blue: 0/255, alpha: 1)
         static let grayQuest = UIColor(red: 50/255, green: 49/255, blue: 50/255, alpha: 1)
+        static let brown = UIColor(red: 103/255, green: 52/255, blue: 0/255, alpha: 1)
+        static let darkbrown = UIColor(red: 150/255, green: 75/255, blue: 0/255, alpha: 1)
     }
 }
 
@@ -34,6 +36,24 @@ extension UIView {
         gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
         gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
         self.layer.insertSublayer(gradient, at: 0)
+    }
+}
+
+extension UIImage {
+    static func gradientImage(with bounds: CGRect, colors: [CGColor], locations: [NSNumber]?) -> UIImage? {
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.colors = colors
+        // This makes it horizontal
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        
+        UIGraphicsBeginImageContext(gradientLayer.bounds.size)
+        gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+        UIGraphicsEndImageContext()
+        return image
     }
 }
 
