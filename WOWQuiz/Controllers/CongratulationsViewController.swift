@@ -34,9 +34,11 @@ class CongratulationsViewController: UIViewController {
         topLabel.alpha = 0
         midLabel.isHidden = true
         backButton.isHidden = true
+        resultsRing.isHidden = true
     }
     
     func configureProgressRing(){
+        
         resultsRing.delegate = self
         //formatter
         var formatter = UICircularProgressRingFormatter()
@@ -63,6 +65,7 @@ class CongratulationsViewController: UIViewController {
         
         //values
         resultsRing.maxValue = CGFloat(totalAnswers)
+        resultsRing.isHidden = false
         if let progress = correctAnswers {
             configureMessage()
             resultsRing.startProgress(to: CGFloat(progress), duration: 2.0, completion: { () in
@@ -111,7 +114,7 @@ class CongratulationsViewController: UIViewController {
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }
 

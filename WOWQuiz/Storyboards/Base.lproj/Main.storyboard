@@ -167,11 +167,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COu-xQ-Tni">
-                                <rect key="frame" x="40" y="501.66666666666674" width="334" height="60"/>
+                                <rect key="frame" x="40" y="782" width="334" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="7mo-aK-91b"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -181,7 +181,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONGRATULATIONS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP2-9m-so5">
                                 <rect key="frame" x="20" y="383" width="374" height="32.666666666666686"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -204,8 +204,8 @@
                             <constraint firstItem="VX5-B2-nKt" firstAttribute="top" secondItem="I9z-DI-6yc" secondAttribute="top" constant="45" id="443-wK-k57"/>
                             <constraint firstItem="cP2-9m-so5" firstAttribute="leading" secondItem="I9z-DI-6yc" secondAttribute="leading" constant="20" id="DuJ-A7-vQ0"/>
                             <constraint firstAttribute="trailing" secondItem="cP2-9m-so5" secondAttribute="trailing" constant="20" id="FbL-s6-szK"/>
-                            <constraint firstItem="COu-xQ-Tni" firstAttribute="top" secondItem="Q5u-Um-mEn" secondAttribute="bottom" constant="30" id="Lqu-3S-aaS"/>
                             <constraint firstItem="I9z-DI-6yc" firstAttribute="trailing" secondItem="COu-xQ-Tni" secondAttribute="trailing" constant="40" id="OOl-f7-9Rc"/>
+                            <constraint firstItem="I9z-DI-6yc" firstAttribute="bottom" secondItem="COu-xQ-Tni" secondAttribute="bottom" constant="20" id="Uy1-EX-hgm"/>
                             <constraint firstItem="cP2-9m-so5" firstAttribute="top" secondItem="VX5-B2-nKt" secondAttribute="bottom" constant="50" id="VTW-Oy-zpT"/>
                             <constraint firstItem="VX5-B2-nKt" firstAttribute="leading" secondItem="I9z-DI-6yc" secondAttribute="leading" constant="20" id="WmU-1K-Ppx"/>
                             <constraint firstItem="Q5u-Um-mEn" firstAttribute="top" secondItem="cP2-9m-so5" secondAttribute="bottom" constant="30" id="cNh-IJ-yS2"/>

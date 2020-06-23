@@ -4,85 +4,85 @@
          {
             "questionID":0,
             "isCorrect":true,
-            "title":"hola"
+            "title":"Blizzard Entertainment"
          },
          {
             "questionID":0,
-            "title":"hola2",
+            "title":"RIOT Games",
             "isCorrect":false
          },
          {
             "isCorrect":false,
-            "title":"hola3",
+            "title":"2K Games",
             "questionID":0
          },
          {
-            "title":"hola4",
+            "title":"CD Projekt Red",
             "questionID":0,
             "isCorrect":false
          }
       ],
-      "title":"Who was 0",
-      "correction":"hola",
+      "title":"Which company develops World of Warcraft?",
+      "correction":"Among many other games, Blizzard Entertainment is developing Word of Warcraft",
       "id":0,
       "level":1,
-      "category":"rogue"
+      "category":"MISC"
    },
    {
-      "correction":"hola",
       "answers":[
          {
             "questionID":1,
-            "title":"hola",
+            "title":"2004",
             "isCorrect":true
          },
          {
             "isCorrect":false,
             "questionID":1,
-            "title":"hola2"
+            "title":"2005"
          },
          {
             "questionID":1,
             "isCorrect":false,
-            "title":"hola3"
+            "title":"2003"
          },
          {
             "questionID":1,
-            "title":"hola4",
+            "title":"2006",
             "isCorrect":false
          }
       ],
+      "correction":"World of Warcaft was launched on November 23rd, 2004",
       "level":1,
-      "category":"rogue",
-      "title":"Who was 1",
+      "category":"MISC",
+      "title":"When was World of Warcraft first launched?",
       "id":1
    },
    {
-      "correction":"hola",
+      "correction":"Word of Warcraft is only played on PC ",
       "level":1,
       "id":2,
-      "title":"Who was 2",
-      "category":"rogue",
+      "title":"On which device/console is World of Warcraft played?",
+      "category":"MISC",
       "answers":[
          {
-            "title":"hola",
+            "title":"PC",
             "questionID":2,
             "isCorrect":true
          },
          {
             "isCorrect":false,
-            "title":"hola2",
+            "title":"PS4",
             "questionID":2
          },
          {
             "isCorrect":false,
-            "title":"hola3",
+            "title":"XBOX",
             "questionID":2
          },
          {
             "questionID":2,
             "isCorrect":false,
-            "title":"hola4"
+            "title":"Nintendo Wii"
          }
       ]
    },
@@ -91,347 +91,347 @@
       "answers":[
          {
             "questionID":3,
-            "title":"hola",
+            "title":"12+",
             "isCorrect":true
          },
          {
             "isCorrect":false,
             "questionID":3,
-            "title":"hola2"
+            "title":"16+"
          },
          {
             "questionID":3,
-            "title":"hola3",
+            "title":"18+",
             "isCorrect":false
          },
          {
             "isCorrect":false,
-            "title":"hola4",
+            "title":"7+",
             "questionID":3
          }
       ],
-      "category":"rogue",
-      "title":"Who was 3",
+      "category":"MISC",
+      "title":"How is World of Warcraft categorized according to the Pan European Game Information (PEGI) system?",
       "level":1,
-      "correction":"hola"
+      "correction":"According to the Pan European Game Information, World of Warcraft can be played for children of 12 years old and above."
    },
    {
-      "category":"rogue",
+      "category":"RACES",
       "id":4,
-      "title":"Who was 4",
+      "title":"Which one of the following races is not playable in World of Warcraft?",
       "level":1,
       "answers":[
          {
             "questionID":4,
             "isCorrect":true,
-            "title":"hola"
+            "title":"Murlocs"
          },
          {
             "questionID":4,
             "isCorrect":false,
-            "title":"hola2"
+            "title":"Humans"
          },
          {
             "isCorrect":false,
             "questionID":4,
-            "title":"hola3"
+            "title":"Orcs"
          },
          {
-            "title":"hola4",
+            "title":"Gnomes",
             "isCorrect":false,
             "questionID":4
          }
       ],
-      "correction":"hola"
+      "correction":"Although very popular in game, as of summer 2020, Murlocs are not a playable race."
    },
    {
       "answers":[
          {
-            "title":"hola",
+            "title":"The Burning Crusade",
             "isCorrect":true,
             "questionID":5
          },
          {
             "questionID":5,
-            "title":"hola2",
+            "title":"The Frozen Throne",
             "isCorrect":false
          },
          {
             "questionID":5,
-            "title":"hola3",
+            "title":"Mists of Pandaria",
             "isCorrect":false
          },
          {
             "isCorrect":false,
             "questionID":5,
-            "title":"hola4"
+            "title":"Battle for Azeroth"
          }
       ],
       "id":5,
-      "correction":"hola",
-      "title":"Who was 5",
+      "correction":"Launched in 2007, The Burning Crusade was the first expansion for World of Warcraft.",
+      "title":"What was the name of the first World of Warcraft expansion?",
       "level":1,
-      "category":"rogue"
+      "category":"MISC"
    },
    {
-      "category":"rogue",
+      "category":"LORE",
       "answers":[
          {
             "isCorrect":true,
-            "title":"hola",
+            "title":"Red",
             "questionID":6
          },
          {
-            "title":"hola2",
+            "title":"Blue",
             "isCorrect":false,
             "questionID":6
          },
          {
             "questionID":6,
             "isCorrect":false,
-            "title":"hola3"
+            "title":"Yellow"
          },
          {
-            "title":"hola4",
+            "title":"Green",
             "isCorrect":false,
             "questionID":6
          }
       ],
-      "title":"Who was 6",
-      "correction":"hola",
+      "title":"Which of the following colors is the Horde associated with?",
+      "correction":"Red has always been the color of the Horde banner",
       "level":1,
       "id":6
    },
    {
       "answers":[
          {
-            "title":"hola",
+            "title":"Blue",
             "isCorrect":true,
             "questionID":7
          },
          {
             "isCorrect":false,
             "questionID":7,
-            "title":"hola2"
+            "title":"Red"
          },
          {
             "isCorrect":false,
-            "title":"hola3",
+            "title":"Yellow",
             "questionID":7
          },
          {
             "isCorrect":false,
             "questionID":7,
-            "title":"hola4"
+            "title":"Green"
          }
       ],
-      "correction":"hola",
-      "title":"Who was 7",
-      "category":"rogue",
+      "correction":"Blue has always been the color of the Alliance banner",
+      "title":"Which of the following colors is the Alliance associated with?",
+      "category":"LORE",
       "id":7,
       "level":1
    },
    {
-      "category":"rogue",
-      "title":"Who was 8",
+      "category":"LORE",
+      "title":"What are the names of the two Word of Warcraft factions?",
       "id":8,
       "answers":[
          {
             "isCorrect":true,
             "questionID":8,
-            "title":"hola"
+            "title":"Horde and Alliance"
          },
          {
             "isCorrect":false,
             "questionID":8,
-            "title":"hola2"
+            "title":"Horde and Crusaders"
          },
          {
-            "title":"hola3",
+            "title":"Death Knights and Alliance",
             "questionID":8,
             "isCorrect":false
          },
          {
             "isCorrect":false,
-            "title":"hola4",
+            "title":"Murlocs and Gnomes",
             "questionID":8
          }
       ],
-      "correction":"hola",
+      "correction":"Horde and alliance are the only two factions on World of Warcraft.",
       "level":1
    },
    {
-      "category":"rogue",
+      "category":"CLASS",
       "level":1,
       "id":9,
-      "title":"Who was 9",
+      "title":"Which one of the following classes is not playable in World of Warcraft?",
       "answers":[
          {
             "isCorrect":true,
             "questionID":9,
-            "title":"hola"
+            "title":"Demon rogue"
          },
          {
             "questionID":9,
             "isCorrect":false,
-            "title":"hola2"
+            "title":"Warrior"
          },
          {
             "questionID":9,
-            "title":"hola3",
+            "title":"Mage",
             "isCorrect":false
          },
          {
             "isCorrect":false,
             "questionID":9,
-            "title":"hola4"
+            "title":"Shaman"
          }
       ],
-      "correction":"hola"
+      "correction":"Demon rogue is not available as a class in Word of Warcraft."
    },
    {
-      "correction":"hola",
+      "correction":"Orgrimmar was considered to be the main city for the Horde, where you could find its Warchief.",
       "level":1,
-      "category":"rogue",
-      "title":"Who was 10",
+      "category":"MISC",
+      "title":"In classic World of Warcraft, which one of these cities was considered the Horde capital?",
       "id":10,
       "answers":[
          {
-            "title":"hola",
+            "title":"Orgrimmar",
             "isCorrect":true,
             "questionID":10
          },
          {
-            "title":"hola2",
+            "title":"Thunder Bluff",
             "isCorrect":false,
             "questionID":10
          },
          {
             "isCorrect":false,
             "questionID":10,
-            "title":"hola3"
+            "title":"Undercity"
          },
          {
             "isCorrect":false,
             "questionID":10,
-            "title":"hola4"
+            "title":"Silvermoon City"
          }
       ]
    },
    {
       "id":11,
-      "correction":"hola",
+      "correction":"Stormwind City was considered to be the main city for the Alliance, where you could find its Warchief.",
       "level":1,
-      "category":"rogue",
-      "title":"Who was 11",
+      "category":"MISC",
+      "title":"In classic World of Warcraft, which one of these cities was considered the Alliance capital?",
       "answers":[
          {
             "isCorrect":true,
-            "title":"hola",
+            "title":"Stormwind City",
             "questionID":11
          },
          {
-            "title":"hola2",
+            "title":"Ironforge",
             "isCorrect":false,
             "questionID":11
          },
          {
             "isCorrect":false,
-            "title":"hola3",
+            "title":"Darnassus",
             "questionID":11
          },
          {
             "isCorrect":false,
-            "title":"hola4",
+            "title":"Exodar",
             "questionID":11
          }
       ]
    },
    {
-      "category":"rogue",
-      "title":"Who was 12",
+      "category":"MISC",
+      "title":"What does LFG stand for in World of Warcraft?",
       "id":12,
       "answers":[
          {
             "isCorrect":true,
             "questionID":12,
-            "title":"hola"
+            "title":"Looking For Group"
          },
          {
             "questionID":12,
-            "title":"hola2",
+            "title":"Left For Granted ",
             "isCorrect":false
          },
          {
             "isCorrect":false,
             "questionID":12,
-            "title":"hola3"
+            "title":"Looking For Game"
          },
          {
-            "title":"hola4",
+            "title":"Looking For Gandalf",
             "questionID":12,
             "isCorrect":false
          }
       ],
-      "correction":"hola",
+      "correction":"LFG is the acronym for Looking For Group",
       "level":1
    },
    {
-      "category":"rogue",
+      "category":"DUNGEONS",
       "id":13,
-      "correction":"hola",
-      "title":"Who was 13",
+      "correction":"Ragefire Chasm is a dungeon located in the Cleft of Shadow, Orgrimmar for characters between level 13 and 18.",
+      "title":"What's the name of the dungeon that can be found within Orgrimmar?",
       "answers":[
          {
             "isCorrect":true,
-            "title":"hola",
+            "title":"Ragefire Chasm",
             "questionID":13
          },
          {
-            "title":"hola2",
+            "title":"Wailing Caverns",
             "questionID":13,
             "isCorrect":false
          },
          {
             "questionID":13,
-            "title":"hola3",
+            "title":"The Deadmines",
             "isCorrect":false
          },
          {
             "questionID":13,
             "isCorrect":false,
-            "title":"hola4"
+            "title":"Shadowfang Keep"
          }
       ],
       "level":1
    },
    {
       "id":14,
-      "correction":"hola",
+      "correction":"The Stockade is a dungeon located in the Mage Quarter, Stormwind City, for characters between level 22 and 30.",
       "answers":[
          {
-            "title":"hola",
+            "title":"The Stockade",
             "questionID":14,
             "isCorrect":true
          },
          {
             "isCorrect":false,
             "questionID":14,
-            "title":"hola2"
+            "title":"Shadowfang Keep"
          },
          {
             "questionID":14,
-            "title":"hola3",
+            "title":"The deadmines",
             "isCorrect":false
          },
          {
-            "title":"hola4",
+            "title":"Ragefire Chasm",
             "questionID":14,
             "isCorrect":false
          }
       ],
       "level":1,
-      "category":"rogue",
-      "title":"Who was 14"
+      "category":"DUNGEON",
+      "title":"What's the name of the dungeon that can be found within Stormwind City?"
    }
 ]
