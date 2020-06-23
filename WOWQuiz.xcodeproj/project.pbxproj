@@ -258,7 +258,7 @@
 				5FEB53302455D3ED00888FB4 /* Sources */,
 				5FEB53312455D3ED00888FB4 /* Frameworks */,
 				5FEB53322455D3ED00888FB4 /* Resources */,
-				04BDB258F9B49FF87A5A3E5B /* [CP] Embed Pods Frameworks */,
+				72A7ED3D8795568CA563C4FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,7 +296,7 @@
 				5FEB53512455D3EE00888FB4 /* Sources */,
 				5FEB53522455D3EE00888FB4 /* Frameworks */,
 				5FEB53532455D3EE00888FB4 /* Resources */,
-				0461913999F7DD2C17840179 /* [CP] Embed Pods Frameworks */,
+				3BD803C2B48275689EF37CCF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -382,7 +382,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0461913999F7DD2C17840179 /* [CP] Embed Pods Frameworks */ = {
+		3BD803C2B48275689EF37CCF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -397,23 +397,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WOWQuiz-WOWQuizUITests/Pods-WOWQuiz-WOWQuizUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		04BDB258F9B49FF87A5A3E5B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WOWQuiz/Pods-WOWQuiz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WOWQuiz/Pods-WOWQuiz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WOWQuiz/Pods-WOWQuiz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		44D2ED3FB3A07DF8811258AA /* [CP] Check Pods Manifest.lock */ = {
@@ -436,6 +419,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72A7ED3D8795568CA563C4FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WOWQuiz/Pods-WOWQuiz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WOWQuiz/Pods-WOWQuiz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WOWQuiz/Pods-WOWQuiz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8AF9C042CA76D7350AF271FD /* [CP] Check Pods Manifest.lock */ = {
