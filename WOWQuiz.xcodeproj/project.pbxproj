@@ -28,6 +28,7 @@
 		5FEB536B2455D45100888FB4 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB536A2455D45100888FB4 /* Quiz.swift */; };
 		5FEB536E2455D56200888FB4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB536D2455D56200888FB4 /* GameViewController.swift */; };
 		5FEB53702455D87300888FB4 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB536F2455D87300888FB4 /* DatabaseManager.swift */; };
+		5FEBF29D24A20F3100761965 /* quizData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBF29C24A20F3100761965 /* quizData.json */; };
 		95EF09A9DDC020880A71D597 /* Pods_WOWQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A047207092C38BDE8FDD57B /* Pods_WOWQuizTests.framework */; };
 		DFFF1DADC1288AA20CCBF547 /* Pods_WOWQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 809C4D398C508B7E1FB6FEF0 /* Pods_WOWQuiz.framework */; };
 		FCFDE7017B5FA647DD886760 /* Pods_WOWQuiz_WOWQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335307589F4D1815B9B87D89 /* Pods_WOWQuiz_WOWQuizUITests.framework */; };
@@ -81,6 +82,7 @@
 		5FEB536A2455D45100888FB4 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		5FEB536D2455D56200888FB4 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5FEB536F2455D87300888FB4 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		5FEBF29C24A20F3100761965 /* quizData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quizData.json; sourceTree = "<group>"; };
 		6290C5C665B3FECE1C62213B /* Pods-WOWQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOWQuiz.release.xcconfig"; path = "Target Support Files/Pods-WOWQuiz/Pods-WOWQuiz.release.xcconfig"; sourceTree = "<group>"; };
 		809C4D398C508B7E1FB6FEF0 /* Pods_WOWQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WOWQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A047207092C38BDE8FDD57B /* Pods_WOWQuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WOWQuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 		5FCFA56324570EB700FE08D8 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				5FEBF29C24A20F3100761965 /* quizData.json */,
 				5FCFA56624570F1500FE08D8 /* LifeCraft_Font.ttf */,
 				5FCFA56A2457136A00FE08D8 /* Morpheus.ttf */,
 				5FCFA56424570ECA00FE08D8 /* Constants.swift */,
@@ -357,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FCFA56724570F1E00FE08D8 /* LifeCraft_Font.ttf in Resources */,
+				5FEBF29D24A20F3100761965 /* quizData.json in Resources */,
 				5FCFA56B2457136A00FE08D8 /* Morpheus.ttf in Resources */,
 				5FEB53442455D3EE00888FB4 /* LaunchScreen.storyboard in Resources */,
 				5FEB53412455D3EE00888FB4 /* Assets.xcassets in Resources */,

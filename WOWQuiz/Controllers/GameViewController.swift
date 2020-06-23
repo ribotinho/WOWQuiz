@@ -1,4 +1,5 @@
 import UIKit
+import RealmSwift
 
 class GameViewController: UIViewController {
     
@@ -34,7 +35,6 @@ class GameViewController: UIViewController {
             sender.blink(for: quiz.isSelectedAnswerCorrect(for: buttonTitle))
             if quiz.isSelectedAnswerCorrect(for: buttonTitle){
                 correctAnswers += 1
-                print("correct: \(correctAnswers)")
                 showAlert(with : "Correct")
             }else{
                 showAlert(with : "False")
@@ -135,11 +135,6 @@ class GameViewController: UIViewController {
     
     fileprivate func configureQuestionBackgroundView() {
         questionBackgroundView.backgroundColor = .clear
-        /*questionBackgroundView.layer.cornerRadius = 25
-        questionBackgroundView.layer.shadowColor = UIColor.black.cgColor
-        questionBackgroundView.layer.shadowOffset = .zero
-        questionBackgroundView.layer.shadowRadius = 15
-        questionBackgroundView.layer.shadowOpacity = 0.8*/
     }
     
     
@@ -203,6 +198,8 @@ class GameViewController: UIViewController {
             destionationVC.correctAnswers = correctAnswers
         }
     }
+    
+   
 }
 
 //MARK: - AlertDelegate
@@ -222,3 +219,4 @@ extension GameViewController : AlertDelegate{
     }
     
 }
+

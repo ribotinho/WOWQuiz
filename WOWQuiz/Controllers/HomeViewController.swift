@@ -1,18 +1,13 @@
-import RealmSwift
 import UIKit
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var startGameButon: UIButton!
     var quizGame : Quiz{
-        let questions = DatabaseManager.sharedInstance.getDataFromDB()
-        let quizGame = Quiz(with: questions)
-        return quizGame
+        let quiz = Quiz(questions: loadjson().shuffled(), total: 15, currentQuestion: 0)
+        return quiz
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        //DatabaseManager.sharedInstance.populateQuestion()
-    }
+
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -22,7 +17,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         navigationController?.navigationBar.isHidden = true
-        print(Realm.Configuration.defaultConfiguration.fileURL)
     }
     
     @IBAction func startButtonTapped(_ sender: Any) {
@@ -34,6 +28,21 @@ class HomeViewController: UIViewController {
             let destionationVC = segue.destination as! GameViewController
             destionationVC.quiz = quizGame
         }
+    }
+    
+    func loadjson() -> [Question]{
+        if let url = Bundle.main.url(forResource: "quizData", withExtension: "json") {
+            print(url)
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(Array<Question>.self, from: data)
+                return jsonData
+            } catch {
+                print("error:\(error)")
+            }
+        }
+        return [Question]()
     }
     
     private func configureUI(){

@@ -1,17 +1,9 @@
 import Foundation
-import RealmSwift
 
-class Quiz {
-    var questions : Results<Question>!
+struct Quiz {
+    var questions : [Question]
     var total : Int = 0
     var currentQuestion : Int = 0
-    
-    convenience init(with questions : Results<Question>) {
-        self.init()
-        self.questions = questions
-        self.total = questions.count
-    }
-    
     
     func isFinished() -> Bool{
         return currentQuestion < questions.count ? false : true
@@ -27,7 +19,7 @@ class Quiz {
         return false
     }
     
-    func nextQuestion() {
+    mutating func nextQuestion() {
         self.currentQuestion += 1
     }
     

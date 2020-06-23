@@ -1,4 +1,4 @@
-import RealmSwift
+/*import RealmSwift
 import Foundation
 
 struct DatabaseManager {
@@ -64,3 +64,4 @@ struct DatabaseManager {
         }
     }
 }
+*/

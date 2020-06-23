@@ -8,6 +8,7 @@ class CongratulationsViewController: UIViewController {
     @IBOutlet weak var resultsRing: UICircularProgressRing!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var midLabel: UILabel!
     var correctAnswers : Int?
     let totalAnswers = 15
     override func viewDidLoad() {
@@ -22,19 +23,20 @@ class CongratulationsViewController: UIViewController {
     
     func configureUI(){
         
-        backButton.setTitle("TRY AGAIN", for: .normal)
-        backButton.backgroundColor = .lightGray
-        backButton.layer.shadowColor = UIColor.gray.cgColor
+        backButton.setTitle("PLAY AGAIN", for: .normal)
+        backButton.backgroundColor = .red
+        backButton.layer.shadowColor = UIColor.white.cgColor
         backButton.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
         backButton.layer.shadowOpacity = 5.0
         backButton.layer.shadowRadius = 5
         backButton.layer.masksToBounds = false
         backButton.layer.cornerRadius = 5.0
         topLabel.alpha = 0
+        midLabel.isHidden = true
+        backButton.isHidden = true
     }
     
     func configureProgressRing(){
-        correctAnswers = 12
         resultsRing.delegate = self
         //formatter
         var formatter = UICircularProgressRingFormatter()
@@ -62,6 +64,7 @@ class CongratulationsViewController: UIViewController {
         //values
         resultsRing.maxValue = CGFloat(totalAnswers)
         if let progress = correctAnswers {
+            configureMessage()
             resultsRing.startProgress(to: CGFloat(progress), duration: 2.0, completion: { () in
                 self.drawMessage()
             })
@@ -78,14 +81,34 @@ class CongratulationsViewController: UIViewController {
                 self.topLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
             }) { (error) in
                 self.topLabel.transform = CGAffineTransform(translationX: 20, y: 0)
-                    UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
-                        self.topLabel.transform = CGAffineTransform.identity
-                    }, completion: nil)
+                UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
+                    self.topLabel.transform = CGAffineTransform.identity
+                }) { (error) in
+                    self.midLabel.isHidden = false
+                    self.backButton.isHidden = false
                 }
             }
         }
+    }
     
-    
+    private func configureMessage(){
+        if let correct = correctAnswers{
+            if correct < 5{
+                topLabel.text = "KEEP TRYING"
+                midLabel.text = "You have still a lot to learn from this magnific game: World of Warcraft.\n\nKeep playing to earn a higher score and discover new hidden questions.\n\nIf you have any suggestions to make this quiz even better, please don't hesitate to send us an email to contact@pauribot.com"
+            }
+            else if correct > 5 && correct < 10 {
+                topLabel.text = "GREAT JOB!"
+                midLabel.text = "You have done a great job in this quiz and it's noticable that you are very knowledgeable in this game: World of Warcraft.\n\nKeep playing to earn a higher score and discover new hidden questions.\n\nIf you have any suggestions to make this quiz even better, please don't hesitate to send us an email to contact@pauribot.com"
+            }else if correct > 10 && correct < 15{
+                topLabel.text = "CONGRATULATIONS!"
+                midLabel.text = "You are a real expert on Word of Warcraft but there's a few questions that you missed.\n\nKeep playing to earn the highest score and discover new hidden questions\n\nIf you have any suggestions to make this quiz even better, please don't hesitate to send us an email to contact@pauribot.com"
+            }else{
+                topLabel.text = "INCREDIBLE!"
+                midLabel.text = "Congratulations! You are an avid player of World of Warcraft and you have earned the highest score!\n\nKeep playing to discover new hidden questions\n\nIf you have any suggestions to make this quiz even better, please don't hesitate to send us an email to contact@pauribot.com"
+            }
+        }
+    }
     
     @IBAction func backButtonTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
