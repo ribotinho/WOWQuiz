@@ -16,7 +16,6 @@
 		5FCFA56524570ECA00FE08D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCFA56424570ECA00FE08D8 /* Constants.swift */; };
 		5FCFA56724570F1E00FE08D8 /* LifeCraft_Font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FCFA56624570F1500FE08D8 /* LifeCraft_Font.ttf */; };
 		5FCFA56B2457136A00FE08D8 /* Morpheus.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FCFA56A2457136A00FE08D8 /* Morpheus.ttf */; };
-		5FDC58F2245ED16000C7092B /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC58F1245ED16000C7092B /* NextButton.swift */; };
 		5FEB53382455D3ED00888FB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB53372455D3ED00888FB4 /* AppDelegate.swift */; };
 		5FEB533A2455D3ED00888FB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB53392455D3ED00888FB4 /* SceneDelegate.swift */; };
 		5FEB533F2455D3ED00888FB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FEB533D2455D3ED00888FB4 /* Main.storyboard */; };
@@ -27,7 +26,6 @@
 		5FEB53692455D42000888FB4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB53682455D42000888FB4 /* Question.swift */; };
 		5FEB536B2455D45100888FB4 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB536A2455D45100888FB4 /* Quiz.swift */; };
 		5FEB536E2455D56200888FB4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB536D2455D56200888FB4 /* GameViewController.swift */; };
-		5FEB53702455D87300888FB4 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB536F2455D87300888FB4 /* DatabaseManager.swift */; };
 		5FEBF29D24A20F3100761965 /* quizData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBF29C24A20F3100761965 /* quizData.json */; };
 		95EF09A9DDC020880A71D597 /* Pods_WOWQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A047207092C38BDE8FDD57B /* Pods_WOWQuizTests.framework */; };
 		DFFF1DADC1288AA20CCBF547 /* Pods_WOWQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 809C4D398C508B7E1FB6FEF0 /* Pods_WOWQuiz.framework */; };
@@ -64,7 +62,6 @@
 		5FCFA56424570ECA00FE08D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5FCFA56624570F1500FE08D8 /* LifeCraft_Font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LifeCraft_Font.ttf; sourceTree = "<group>"; };
 		5FCFA56A2457136A00FE08D8 /* Morpheus.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Morpheus.ttf; sourceTree = "<group>"; };
-		5FDC58F1245ED16000C7092B /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 		5FEB53342455D3ED00888FB4 /* WOWQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WOWQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FEB53372455D3ED00888FB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FEB53392455D3ED00888FB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +78,6 @@
 		5FEB53682455D42000888FB4 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5FEB536A2455D45100888FB4 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		5FEB536D2455D56200888FB4 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		5FEB536F2455D87300888FB4 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		5FEBF29C24A20F3100761965 /* quizData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quizData.json; sourceTree = "<group>"; };
 		6290C5C665B3FECE1C62213B /* Pods-WOWQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOWQuiz.release.xcconfig"; path = "Target Support Files/Pods-WOWQuiz/Pods-WOWQuiz.release.xcconfig"; sourceTree = "<group>"; };
 		809C4D398C508B7E1FB6FEF0 /* Pods_WOWQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WOWQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,7 +142,6 @@
 				5FCFA56A2457136A00FE08D8 /* Morpheus.ttf */,
 				5FCFA56424570ECA00FE08D8 /* Constants.swift */,
 				5FCB693E245B0353003C8AD5 /* AnswerButton.swift */,
-				5FDC58F1245ED16000C7092B /* NextButton.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -210,7 +205,6 @@
 			children = (
 				5FEB536A2455D45100888FB4 /* Quiz.swift */,
 				5FEB53682455D42000888FB4 /* Question.swift */,
-				5FEB536F2455D87300888FB4 /* DatabaseManager.swift */,
 				5FAE31442455E5E1009F4F8F /* Answer.swift */,
 			);
 			path = Model;
@@ -495,7 +489,6 @@
 			files = (
 				5FEB536E2455D56200888FB4 /* GameViewController.swift in Sources */,
 				5FEB536B2455D45100888FB4 /* Quiz.swift in Sources */,
-				5FEB53702455D87300888FB4 /* DatabaseManager.swift in Sources */,
 				5FCFA5622456AB1900FE08D8 /* HomeViewController.swift in Sources */,
 				5FAE31452455E5E1009F4F8F /* Answer.swift in Sources */,
 				5FCB693F245B0353003C8AD5 /* AnswerButton.swift in Sources */,
@@ -504,7 +497,6 @@
 				5FCD46DF2459AFCC00F71F7F /* AlertViewController.swift in Sources */,
 				5FEB53382455D3ED00888FB4 /* AppDelegate.swift in Sources */,
 				5FEB533A2455D3ED00888FB4 /* SceneDelegate.swift in Sources */,
-				5FDC58F2245ED16000C7092B /* NextButton.swift in Sources */,
 				5FCFA56524570ECA00FE08D8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

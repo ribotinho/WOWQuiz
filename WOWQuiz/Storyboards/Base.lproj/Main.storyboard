@@ -166,10 +166,26 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COu-xQ-Tni">
-                                <rect key="frame" x="40" y="782" width="334" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONGRATULATIONS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP2-9m-so5">
+                                <rect key="frame" x="20" y="303" width="374" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="7mo-aK-91b"/>
+                                    <constraint firstAttribute="height" constant="40" id="T6s-jd-Rli"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q5u-Um-mEn">
+                                <rect key="frame" x="20" y="363" width="374" height="369"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COu-xQ-Tni">
+                                <rect key="frame" x="20" y="752" width="374" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="OZH-ZE-FyN"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="ScZ-6e-YAQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="Button">
@@ -179,40 +195,29 @@
                                     <action selector="backButtonTapped:" destination="gEA-kw-IdR" eventType="touchUpInside" id="3a3-v1-g5l"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONGRATULATIONS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP2-9m-so5">
-                                <rect key="frame" x="20" y="383" width="374" height="32.666666666666686"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VX5-B2-nKt" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                <rect key="frame" x="20" y="133" width="374" height="200"/>
+                                <rect key="frame" x="20" y="108" width="374" height="175"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="nTB-e0-cdk"/>
+                                    <constraint firstAttribute="height" constant="175" id="GwK-J0-mm2"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5u-Um-mEn">
-                                <rect key="frame" x="20" y="445.66666666666669" width="374" height="26"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="VX5-B2-nKt" firstAttribute="top" secondItem="I9z-DI-6yc" secondAttribute="top" constant="45" id="443-wK-k57"/>
-                            <constraint firstItem="cP2-9m-so5" firstAttribute="leading" secondItem="I9z-DI-6yc" secondAttribute="leading" constant="20" id="DuJ-A7-vQ0"/>
-                            <constraint firstAttribute="trailing" secondItem="cP2-9m-so5" secondAttribute="trailing" constant="20" id="FbL-s6-szK"/>
-                            <constraint firstItem="I9z-DI-6yc" firstAttribute="trailing" secondItem="COu-xQ-Tni" secondAttribute="trailing" constant="40" id="OOl-f7-9Rc"/>
-                            <constraint firstItem="I9z-DI-6yc" firstAttribute="bottom" secondItem="COu-xQ-Tni" secondAttribute="bottom" constant="20" id="Uy1-EX-hgm"/>
-                            <constraint firstItem="cP2-9m-so5" firstAttribute="top" secondItem="VX5-B2-nKt" secondAttribute="bottom" constant="50" id="VTW-Oy-zpT"/>
-                            <constraint firstItem="VX5-B2-nKt" firstAttribute="leading" secondItem="I9z-DI-6yc" secondAttribute="leading" constant="20" id="WmU-1K-Ppx"/>
-                            <constraint firstItem="Q5u-Um-mEn" firstAttribute="top" secondItem="cP2-9m-so5" secondAttribute="bottom" constant="30" id="cNh-IJ-yS2"/>
-                            <constraint firstItem="COu-xQ-Tni" firstAttribute="leading" secondItem="I9z-DI-6yc" secondAttribute="leading" constant="40" id="sKo-8S-5DS"/>
-                            <constraint firstItem="I9z-DI-6yc" firstAttribute="trailing" secondItem="Q5u-Um-mEn" secondAttribute="trailing" constant="20" id="upx-yf-7FI"/>
-                            <constraint firstItem="Q5u-Um-mEn" firstAttribute="leading" secondItem="I9z-DI-6yc" secondAttribute="leading" constant="20" id="uzo-4b-TrQ"/>
-                            <constraint firstItem="I9z-DI-6yc" firstAttribute="trailing" secondItem="VX5-B2-nKt" secondAttribute="trailing" constant="20" id="wv7-xf-ZZ1"/>
+                            <constraint firstItem="cP2-9m-so5" firstAttribute="top" secondItem="VX5-B2-nKt" secondAttribute="bottom" constant="20" id="41A-vW-rB0"/>
+                            <constraint firstItem="COu-xQ-Tni" firstAttribute="leading" secondItem="I9z-DI-6yc" secondAttribute="leading" constant="20" id="KDC-EC-zvm"/>
+                            <constraint firstItem="I9z-DI-6yc" firstAttribute="trailing" secondItem="VX5-B2-nKt" secondAttribute="trailing" constant="20" id="M6i-8Y-xDm"/>
+                            <constraint firstItem="Q5u-Um-mEn" firstAttribute="leading" secondItem="I9z-DI-6yc" secondAttribute="leading" constant="20" id="P2c-v8-0Vh"/>
+                            <constraint firstItem="VX5-B2-nKt" firstAttribute="leading" secondItem="I9z-DI-6yc" secondAttribute="leading" constant="20" id="Y1U-xi-GUy"/>
+                            <constraint firstItem="COu-xQ-Tni" firstAttribute="top" secondItem="Q5u-Um-mEn" secondAttribute="bottom" constant="20" id="cTU-vc-9ih"/>
+                            <constraint firstItem="Q5u-Um-mEn" firstAttribute="top" secondItem="cP2-9m-so5" secondAttribute="bottom" constant="20" id="fpU-nv-oFh"/>
+                            <constraint firstItem="I9z-DI-6yc" firstAttribute="trailing" secondItem="Q5u-Um-mEn" secondAttribute="trailing" constant="20" id="geV-mH-PY4"/>
+                            <constraint firstItem="I9z-DI-6yc" firstAttribute="trailing" secondItem="cP2-9m-so5" secondAttribute="trailing" constant="20" id="ifL-90-UnM"/>
+                            <constraint firstItem="cP2-9m-so5" firstAttribute="leading" secondItem="I9z-DI-6yc" secondAttribute="leading" constant="20" id="ijU-nz-jvr"/>
+                            <constraint firstItem="I9z-DI-6yc" firstAttribute="bottom" secondItem="COu-xQ-Tni" secondAttribute="bottom" constant="20" id="mi1-sI-SNk"/>
+                            <constraint firstItem="VX5-B2-nKt" firstAttribute="top" secondItem="I9z-DI-6yc" secondAttribute="top" constant="20" id="tbJ-xy-rb6"/>
+                            <constraint firstItem="I9z-DI-6yc" firstAttribute="trailing" secondItem="COu-xQ-Tni" secondAttribute="trailing" constant="20" id="uyD-yB-pPd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I9z-DI-6yc"/>
                     </view>
