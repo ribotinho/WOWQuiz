@@ -4,14 +4,9 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var startGameButon: UIButton!
     var quizGame : Quiz{
-        let quiz = Quiz(questions: loadjson().shuffled(), total: 15, currentQuestion: 0)
+        let quiz = Quiz(questions: loadQuestions().shuffled(), total: 15, currentQuestion: 0)
         return quiz
     }
-
-    
-    /*override var prefersStatusBarHidden: Bool {
-        return true
-    }*/
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +24,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    func loadjson() -> [Question]{
+    func loadQuestions() -> [Question]{
         if let url = Bundle.main.url(forResource: "quizData", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)

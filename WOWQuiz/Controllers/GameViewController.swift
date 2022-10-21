@@ -37,7 +37,6 @@ class GameViewController: UIViewController {
             }else{
                 showAlert(with : "False")
             }
-            
         }
     }
     
@@ -51,8 +50,7 @@ class GameViewController: UIViewController {
                     UIView.animate(withDuration: 1.0) {
                         self.progressBar.setProgress(Float(self.runCount)/Float(30), animated: true)
                     }
-                    
-                }
+                 }
             }else{
                 timer.invalidate()
                 self.showAlert(with: "time")
@@ -64,7 +62,7 @@ class GameViewController: UIViewController {
     
     //MARK: - UI
     func configureUI(){
-        view.backgroundColor = K.Colors.grayQuest
+        view.backgroundColor = UIColor.customGrey
         questionBackgroundImageView.layer.cornerRadius = 15
         questionTitleLabel.numberOfLines = 0
         configureQuestionBackgroundView()
@@ -92,7 +90,6 @@ class GameViewController: UIViewController {
         answerButtonStackView.leadingAnchor.constraint(equalTo: questionBackgroundView.leadingAnchor).isActive = true
         answerButtonStackView.trailingAnchor.constraint(equalTo: questionBackgroundView.trailingAnchor).isActive = true
         answerButtonStackView.bottomAnchor.constraint(equalTo: questionBackgroundView.bottomAnchor).isActive = true
-        
         
         for button in answerButtonStackView.subviews{
             if let newButton = button as? answerButton{
@@ -122,14 +119,12 @@ class GameViewController: UIViewController {
         progressBar.layer.cornerRadius = 13
         progressBar.layer.masksToBounds = true
         progressBar.trackTintColor = .white
-        progressBar.progressImage = UIImage.gradientImage(with: progressBar.frame, colors: [UIColor.red.cgColor, K.Colors.yellow.cgColor], locations: nil)!
+        progressBar.progressImage = UIImage.gradientImage(with: progressBar.frame, colors: [UIColor.red.cgColor, UIColor.customYellow.cgColor], locations: nil)!
     }
     
     fileprivate func configureQuestionBackgroundView() {
         questionBackgroundView.backgroundColor = .clear
     }
-    
-    
     
     @objc func quitButtonTapped( _ sender : UIButton){
         let alert = UIAlertController(title: "Quit Game", message: "Are you sure you want to quit?", preferredStyle: .alert)

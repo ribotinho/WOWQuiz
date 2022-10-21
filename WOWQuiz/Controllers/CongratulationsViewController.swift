@@ -125,18 +125,17 @@ extension CongratulationsViewController : UICircularProgressRingDelegate{
             ring.innerRingColor = .red
         }
         else if newValue > 5 && newValue < 10 {
-            ring.innerRingColor = .yellow
+            ring.innerRingColor = .customYellow
         }else{
             ring.innerRingColor = .green
         }
     }
     
-    //Methods that are currently not used
+    //Mandatory methods that are currently not used
     func didFinishProgress(for ring: UICircularProgressRing) {}
     func didPauseProgress(for ring: UICircularProgressRing) {}
     func didContinueProgress(for ring: UICircularProgressRing) {}
     func willDisplayLabel(for ring: UICircularProgressRing, _ label: UILabel) {}
-    
 }
 
 

@@ -41,7 +41,7 @@ class answerButton: UIButton {
         if checkImageView != nil {
             checkImageView.removeFromSuperview()
         }
-        applyGradient(with: [K.Colors.brown, K.Colors.darkbrown], cornerRadius: 15)
+        applyGradient(with: [UIColor.customBrown, UIColor.customDarkBrown], cornerRadius: 15)
     }
     
     public func blink(for answer : Bool){
@@ -62,7 +62,7 @@ class answerButton: UIButton {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        applyGradient(with: [K.Colors.brown, K.Colors.darkbrown], cornerRadius: 15)
+        applyGradient(with: [UIColor.customBrown, UIColor.customDarkBrown], cornerRadius: 15)
         
     }
 }

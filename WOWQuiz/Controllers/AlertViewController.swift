@@ -18,7 +18,6 @@ class AlertViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-
     }
     
     func configureUI(){
@@ -39,7 +38,6 @@ class AlertViewController: UIViewController {
             headerTitleLabel.text = "CORRECT!"
             headerTitleLabel.textColor = .systemGreen
             
-            
         }else if correct == "False" {
             checkImageView.image = UIImage(systemName: "multiply.circle")
             checkImageView.tintColor = .systemRed
@@ -58,7 +56,6 @@ class AlertViewController: UIViewController {
         dismiss(animated: true, completion: nil)
         delegate?.didTapNextQuestion()
     }
-    
 }
 
 protocol AlertDelegate {

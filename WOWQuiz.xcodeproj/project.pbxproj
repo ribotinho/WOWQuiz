@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F1CABC129029D8400B17DA1 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1CABC029029D8400B17DA1 /* UIView+Ext.swift */; };
+		5F1CABC429029DA500B17DA1 /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1CABC329029DA500B17DA1 /* UIImage+Ext.swift */; };
+		5F1CABC629029DC300B17DA1 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1CABC529029DC300B17DA1 /* UIColor + Ext.swift */; };
 		5FAE31452455E5E1009F4F8F /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE31442455E5E1009F4F8F /* Answer.swift */; };
 		5FCB693F245B0353003C8AD5 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB693E245B0353003C8AD5 /* AnswerButton.swift */; };
 		5FCD46DF2459AFCC00F71F7F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD46DE2459AFCC00F71F7F /* AlertViewController.swift */; };
 		5FCD46E12459AFDC00F71F7F /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCD46E02459AFDC00F71F7F /* Alert.storyboard */; };
 		5FCD46E32459CD2200F71F7F /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD46E22459CD2200F71F7F /* CongratulationsViewController.swift */; };
 		5FCFA5622456AB1900FE08D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCFA5612456AB1900FE08D8 /* HomeViewController.swift */; };
-		5FCFA56524570ECA00FE08D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCFA56424570ECA00FE08D8 /* Constants.swift */; };
 		5FCFA56724570F1E00FE08D8 /* LifeCraft_Font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FCFA56624570F1500FE08D8 /* LifeCraft_Font.ttf */; };
 		5FCFA56B2457136A00FE08D8 /* Morpheus.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FCFA56A2457136A00FE08D8 /* Morpheus.ttf */; };
 		5FEB53382455D3ED00888FB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB53372455D3ED00888FB4 /* AppDelegate.swift */; };
@@ -53,13 +55,15 @@
 		05BD5343347FC5189506B558 /* Pods-WOWQuiz-WOWQuizUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOWQuiz-WOWQuizUITests.release.xcconfig"; path = "Target Support Files/Pods-WOWQuiz-WOWQuizUITests/Pods-WOWQuiz-WOWQuizUITests.release.xcconfig"; sourceTree = "<group>"; };
 		324D9FA9B2533A228FF5197D /* Pods-WOWQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOWQuizTests.release.xcconfig"; path = "Target Support Files/Pods-WOWQuizTests/Pods-WOWQuizTests.release.xcconfig"; sourceTree = "<group>"; };
 		335307589F4D1815B9B87D89 /* Pods_WOWQuiz_WOWQuizUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WOWQuiz_WOWQuizUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1CABC029029D8400B17DA1 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		5F1CABC329029DA500B17DA1 /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		5F1CABC529029DC300B17DA1 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
 		5FAE31442455E5E1009F4F8F /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		5FCB693E245B0353003C8AD5 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		5FCD46DE2459AFCC00F71F7F /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		5FCD46E02459AFDC00F71F7F /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
 		5FCD46E22459CD2200F71F7F /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
 		5FCFA5612456AB1900FE08D8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		5FCFA56424570ECA00FE08D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5FCFA56624570F1500FE08D8 /* LifeCraft_Font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LifeCraft_Font.ttf; sourceTree = "<group>"; };
 		5FCFA56A2457136A00FE08D8 /* Morpheus.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Morpheus.ttf; sourceTree = "<group>"; };
 		5FEB53342455D3ED00888FB4 /* WOWQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WOWQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +144,16 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		5F1CABBF29029D6E00B17DA1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5F1CABC029029D8400B17DA1 /* UIView+Ext.swift */,
+				5F1CABC329029DA500B17DA1 /* UIImage+Ext.swift */,
+				5F1CABC529029DC300B17DA1 /* UIColor + Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5FCD46DC2459AFA600F71F7F /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,9 +176,9 @@
 		5FCFA56324570EB700FE08D8 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				5F1CABBF29029D6E00B17DA1 /* Extensions */,
 				5F1CABBD2902909C00B17DA1 /* Data */,
 				5F1CABBC2902909200B17DA1 /* Fonts */,
-				5FCFA56424570ECA00FE08D8 /* Constants.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -517,11 +531,13 @@
 				5FAE31452455E5E1009F4F8F /* Answer.swift in Sources */,
 				5FCB693F245B0353003C8AD5 /* AnswerButton.swift in Sources */,
 				5FCD46E32459CD2200F71F7F /* CongratulationsViewController.swift in Sources */,
+				5F1CABC429029DA500B17DA1 /* UIImage+Ext.swift in Sources */,
 				5FEB53692455D42000888FB4 /* Question.swift in Sources */,
 				5FCD46DF2459AFCC00F71F7F /* AlertViewController.swift in Sources */,
+				5F1CABC629029DC300B17DA1 /* UIColor + Ext.swift in Sources */,
+				5F1CABC129029D8400B17DA1 /* UIView+Ext.swift in Sources */,
 				5FEB53382455D3ED00888FB4 /* AppDelegate.swift in Sources */,
 				5FEB533A2455D3ED00888FB4 /* SceneDelegate.swift in Sources */,
-				5FCFA56524570ECA00FE08D8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
