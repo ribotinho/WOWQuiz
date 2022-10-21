@@ -13,7 +13,6 @@ class CongratulationsViewController: UIViewController {
     let totalAnswers = 15
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: false)
         configureUI()
     }
     
@@ -62,7 +61,6 @@ class CongratulationsViewController: UIViewController {
         
         //angles in degrees - 270 top and 90 bottom
         resultsRing.startAngle = 270
-        
         //values
         resultsRing.maxValue = CGFloat(totalAnswers)
         resultsRing.isHidden = false
@@ -134,21 +132,10 @@ extension CongratulationsViewController : UICircularProgressRingDelegate{
     }
     
     //Methods that are currently not used
-    func didFinishProgress(for ring: UICircularProgressRing) {
-        
-    }
-    
-    func didPauseProgress(for ring: UICircularProgressRing) {
-        
-    }
-    
-    func didContinueProgress(for ring: UICircularProgressRing) {
-        
-    }
-    
-    func willDisplayLabel(for ring: UICircularProgressRing, _ label: UILabel) {
-        
-    }
+    func didFinishProgress(for ring: UICircularProgressRing) {}
+    func didPauseProgress(for ring: UICircularProgressRing) {}
+    func didContinueProgress(for ring: UICircularProgressRing) {}
+    func willDisplayLabel(for ring: UICircularProgressRing, _ label: UILabel) {}
     
 }
 

@@ -9,14 +9,13 @@ class HomeViewController: UIViewController {
     }
 
     
-    override var prefersStatusBarHidden: Bool {
+    /*override var prefersStatusBarHidden: Bool {
         return true
-    }
+    }*/
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func startButtonTapped(_ sender: Any) {
@@ -32,7 +31,6 @@ class HomeViewController: UIViewController {
     
     func loadjson() -> [Question]{
         if let url = Bundle.main.url(forResource: "quizData", withExtension: "json") {
-            print(url)
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()

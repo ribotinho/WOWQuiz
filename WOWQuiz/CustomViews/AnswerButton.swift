@@ -14,17 +14,17 @@ class answerButton: UIButton {
         configureButton()
     }
     
-     private func configureButton() {
+    private func configureButton() {
         layer.cornerRadius = 15
-        setTitleColor(.white, for: .normal)
         layer.borderWidth = 3
+        layer.masksToBounds = true
         layer.borderColor = UIColor.black.cgColor
-        //applyGradient(with: [K.Colors.brown, K.Colors.darkbrown], cornerRadius: 15)
+        setTitleColor(.white, for: .normal)
         setBackgroundImage(UIImage(named: "button background"), for: .normal)
         titleLabel?.font = UIFont(name: "Futura", size: 20.0)
     }
     
-
+    
     
     private func configureImage(with image : String, with color : UIColor){
         checkImageView = UIImageView(image: UIImage(systemName: image))

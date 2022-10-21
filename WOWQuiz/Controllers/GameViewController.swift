@@ -19,7 +19,6 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         loadQuestion()
-        navigationController?.navigationBar.isHidden = true
     }
     
     
@@ -119,17 +118,11 @@ class GameViewController: UIViewController {
     }
     
     fileprivate func configureProgressBar(){
-        progressBar.transform = progressBar.transform.scaledBy(x: 1, y: 8)
         progressBar.progress = 1.0
-        
-        progressBar.layer.cornerRadius = 10
-        progressBar.clipsToBounds = true
-        progressBar.layer.sublayers![1].cornerRadius = 10
-        progressBar.subviews[1].clipsToBounds = true
-        
+        progressBar.layer.cornerRadius = 13
+        progressBar.layer.masksToBounds = true
         progressBar.trackTintColor = .white
-        let gradientImage = UIImage.gradientImage(with: progressBar.frame, colors: [UIColor.red.cgColor, K.Colors.yellow.cgColor], locations: nil)
-        progressBar.progressImage = gradientImage!
+        progressBar.progressImage = UIImage.gradientImage(with: progressBar.frame, colors: [UIColor.red.cgColor, K.Colors.yellow.cgColor], locations: nil)!
     }
     
     fileprivate func configureQuestionBackgroundView() {

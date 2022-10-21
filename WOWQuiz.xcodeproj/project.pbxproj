@@ -115,6 +115,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F1CABBC2902909200B17DA1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5FCFA56624570F1500FE08D8 /* LifeCraft_Font.ttf */,
+				5FCFA56A2457136A00FE08D8 /* Morpheus.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5F1CABBD2902909C00B17DA1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5FEBF29C24A20F3100761965 /* quizData.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5F1CABBE290290A700B17DA1 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				5FCB693E245B0353003C8AD5 /* AnswerButton.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		5FCD46DC2459AFA600F71F7F /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,11 +162,9 @@
 		5FCFA56324570EB700FE08D8 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				5FEBF29C24A20F3100761965 /* quizData.json */,
-				5FCFA56624570F1500FE08D8 /* LifeCraft_Font.ttf */,
-				5FCFA56A2457136A00FE08D8 /* Morpheus.ttf */,
+				5F1CABBD2902909C00B17DA1 /* Data */,
+				5F1CABBC2902909200B17DA1 /* Fonts */,
 				5FCFA56424570ECA00FE08D8 /* Constants.swift */,
-				5FCB693E245B0353003C8AD5 /* AnswerButton.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -171,6 +194,7 @@
 		5FEB53362455D3ED00888FB4 /* WOWQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				5F1CABBE290290A700B17DA1 /* CustomViews */,
 				5FCFA56324570EB700FE08D8 /* Supporting files */,
 				5FEB536C2455D54C00888FB4 /* Controllers */,
 				5FEB53672455D41100888FB4 /* Model */,
@@ -312,7 +336,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = "Pau Ribot Pujolras";
 				TargetAttributes = {
 					5FEB53332455D3ED00888FB4 = {
@@ -578,6 +602,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -638,6 +663,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

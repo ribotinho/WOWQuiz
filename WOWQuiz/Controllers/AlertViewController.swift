@@ -29,18 +29,15 @@ class AlertViewController: UIViewController {
         nextButton.layer.cornerRadius = 5
         nextButton.setTitleColor(.black, for: .normal)
         nextButton.setTitle(isLast ? "VIEW RESULTS" : "NEXT QUESTION", for: .normal)
-        nextButton.backgroundColor = .systemGray
+        nextButton.backgroundColor = .secondarySystemBackground
         bodyLabel.text = answer
         backView.layer.cornerRadius = 15
-        backView.layer.borderColor = UIColor.red.cgColor
-        backView.layer.borderWidth = 5.0
         
         if correct == "Correct" {
             checkImageView.image = UIImage(systemName: "checkmark.circle")
             checkImageView.tintColor = .systemGreen
             headerTitleLabel.text = "CORRECT!"
             headerTitleLabel.textColor = .systemGreen
-            backView.layer.borderColor = UIColor.green.cgColor
             
             
         }else if correct == "False" {
